@@ -117,16 +117,6 @@ void Test_MAX_WhenItIsEqualTo_b_Returns_a(void)
 
 void Test_CF_Chunks_EraseRange_AssertsBecause_end_IsLessThan_start(void)
 {
-    // /* Arrange */
-    // CF_ChunkList_t      dummy_chunks;
-    // CF_ChunkList_t*     arg_chunks = &dummy_chunks;
-    // CF_ChunkIdx_t       arg_start = Any_uint32_Except(UINT32_MAX);
-    // CF_ChunkIdx_t       arg_end = Any_uint32_LessThan(arg_start);
-
-    // /* Act */
-    // CF_Chunks_EraseRange(&Test_chunks, Test_start, Test_end);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - end>=start");
 } /* end Test_CF_Chunks_EraseRange_AssertsBecause_end_IsLessThan_start */
 
@@ -217,35 +207,11 @@ void Test_CF_Chunks_When_start_IsLessThan_chunks_count_DoesNotChangeStart_EraseR
 
 void Test_CF_Chunks_EraseChunk_AssertsBecause_Given_chunks_count_IsEqTo_0(void)
 {
-    // /* Arrange */
-    // CF_ChunkList_t      dummy_chunks;
-    // CF_ChunkList_t*     arg_chunks = &dummy_chunks;
-    // CF_ChunkIdx_t       arg_erase_index = Any_index_t();
-
-    // arg_chunks->count = 0;
-
-    // /* Act */
-    // CF_Chunks_EraseChunk(arg_chunks, arg_erase_index);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_Chunks_EraseChunk_AssertsBecause_Given_chunks_count_IsEqTo_0 */
 
 void Test_CF_Chunks_EraseChunk_AssertsBecause_Given_erase_index_IsEqTo_chunks_count(void)
 {
-    // /* Arrange */
-    // CF_ChunkList_t      dummy_chunks;
-    // CF_ChunkList_t*     arg_chunks = &dummy_chunks;
-    // CF_ChunkIdx_t       arg_erase_index;
-
-    // arg_chunks->count = 1;
-
-    // arg_erase_index = 2;
-
-    // /* Act */
-    // CF_Chunks_EraseChunk(arg_chunks, arg_erase_index);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_Chunks_EraseChunk_AssertsBecause_Given_erase_index_IsEqTo_chunks_count */
 
@@ -394,19 +360,6 @@ void Test_CF_Chunks_EraseChunk_ErasesLastChunkFrom_chunks_AndDecrements_count(vo
 
 void Test_CF_Chunks_InsertChunk_AssertsBecause_Given_chunks_count_IsEqTo_chunks_CF_max_chunks(void)
 {
-    // /* Arrange */
-    // CF_ChunkList_t      dummy_chunks;
-    // CF_ChunkList_t*     arg_chunks = &dummy_chunks;
-    // CF_ChunkIdx_t       arg_index_before = Any_index_t();
-    // CF_Chunk_t       arg_chunk = {0};
-
-    // arg_chunks->count = Any_uint32();
-    // arg_chunks->CF_max_chunks = arg_chunks->count;
-
-    // /* Act */
-    // CF_Chunks_InsertChunk(arg_chunks, arg_index_before, arg_chunk);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_Chunks_InsertChunk_AssertsBecause_Given_chunks_count_IsEqTo_chunks_CF_max_chunks */
 
@@ -772,21 +725,6 @@ void Test_CF_Chunks_FindInsertPosition_Given_chunks_HasAnyItemsAndReturnCorrectE
 
 void Test_CF_Chunks_CombinePrevious_Asserts_i_GivenIsEqTo_chunks_CF_max_Chunks(void)
 {
-    // /* Arrange */
-    // CF_ChunkList_t      dummy_chunks;
-    // CF_ChunkList_t*     arg_chunks = &dummy_chunks;
-    // CF_ChunkIdx_t       arg_i;
-    // CF_Chunk_t       dummy_chunk = {0};
-    // CF_Chunk_t*      arg_chunk = &dummy_chunk;
-    // CF_ChunkIdx_t       local_result;
-
-    // arg_chunks->CF_max_chunks = Any_uint32_Except(0);
-    // arg_i = arg_chunks->CF_max_chunks;
-
-    // /* Act */
-    // local_result = CF_Chunks_CombinePrevious(arg_chunks, arg_i, arg_chunk);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_Chunks_CombinePrevious_Asserts_i_GivenIsEqTo_chunks_CF_max_Chunks */
 
@@ -1081,22 +1019,6 @@ void Test_CF_Chunks_CombineNext_Given_i_IsEqTo_Given_chunks_count_Return_0(void)
 void Test_CF_Chunks_CombineNext_Given_i_IsNotEqTo_Given_chunks_count_AssertsBecauseGiven_chunk_end_LessThanGiven_chunk_offset(
     void)
 {
-    // /* Arrange */
-    // CF_Chunk_t       dummy_chunks_chunks = {0};
-    // CF_ChunkList_t      dummy_chunks;
-    // CF_ChunkList_t*     arg_chunks = &dummy_chunks;
-    // CF_ChunkIdx_t       arg_i;
-    // CF_Chunk_t       dummy_chunk = {0};
-    // CF_Chunk_t*      arg_chunk = &dummy_chunk;
-    // int           local_result = Any_int_Except(0);
-
-    // arg_chunks->count = Any_uint32();
-    // arg_i = Any_uint32_Except(arg_chunks->count);
-
-    // /* Act */
-    // local_result = CF_Chunks_CombineNext(arg_chunks, arg_i, arg_chunk);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end
      Test_CF_Chunks_CombineNext_Given_i_IsNotEqTo_Given_chunks_count_AssertsBecauseGiven_chunk_end_LessThanGiven_chunk_offset
@@ -1622,75 +1544,12 @@ void Test_CF_Chunks_Insert_CallTo_CF_Chunks_CombineNext_Returns_0_CallTo_CF_Chun
 *******************************************************************************/
 void Test_CF_Chunks_Add_Asserts_WhenGiven_offset_Plus_size_IsLessThanGiven_offset(void)
 {
-    // /* Arrange */
-    // CF_ChunkOffset_t     arg_offset = UINT32_MAX;
-    // CF_ChunkSize_t       arg_size = 1;
-    // CF_Chunk_t            initial_chunks[20] = { {0} }; /* 20 used as a reasonably fast size for the test, but is
-    // still illustrative */ CF_ChunkList_t           dummy_chunks; CF_ChunkList_t*          arg_chunks = &dummy_chunks;
-
-    // /* Arrange for CF_Chunks_FindInsertPosition */
-    // CF_Chunk_t       dummy_chunk = {0};
-    // uint8         num_chunks_before = Any_uint8_LessThan(10);
-    // uint8         num_chunks_after = Any_uint8_LessThan(10);
-    // uint8         i = 0;
-
-    // dummy_chunk.offset = Any_uint32_BetweenInclusive(1, UINT32_MAX - 1);
-
-    // for(i = 0; i < num_chunks_before; ++i)
-    // {
-    //    initial_chunks[i].offset = Any_uint32_LessThan(dummy_chunk.offset);
-    // }
-
-    // for(i = 0; i < num_chunks_after; ++i)
-    // {
-    //    initial_chunks[i + num_chunks_before].offset = Any_uint32_GreaterThan(dummy_chunk.offset);
-    // }
-
-    // arg_chunks->count = num_chunks_before + num_chunks_after;
-    // arg_chunks->chunks = initial_chunks;
-
-    // /* Act */
-    // CF_ChunkListAdd(arg_chunks, arg_offset, arg_size);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_Chunks_Add_Asserts_WhenGiven_offset_Plus_size_IsLessThanGiven_offset */
 
 void Test_CF_Chunks_Add_Asserts_WhenInsertPositionIsNotEqualToGiven_chunks_count_And_chunk_offset_IsNotLessThanOrEqToGiven_chunks_i_offset(
     void)
 {
-    // /* Arrange */
-    // CF_ChunkOffset_t     arg_offset = 1;
-    // CF_ChunkSize_t       arg_size = 1;
-    // CF_Chunk_t            initial_chunks[20] = { {0} }; /* 20 used as a reasonably fast size for the test, but is
-    // still illustrative */ CF_ChunkList_t           dummy_chunks; CF_ChunkList_t*          arg_chunks = &dummy_chunks;
-
-    // /* Arrange for CF_Chunks_FindInsertPosition */
-    // CF_Chunk_t       dummy_chunk = {0};
-    // uint8         num_chunks_before = Any_uint8_LessThan(10);
-    // uint8         num_chunks_after = Any_uint8_LessThan(10);
-    // uint8         i = 0;
-
-    // dummy_chunk.offset = Any_uint32_BetweenInclusive(1, UINT32_MAX - 1);
-
-    // for(i = 0; i < num_chunks_before; ++i)
-    // {
-    //    initial_chunks[i].offset = Any_uint32_LessThan(dummy_chunk.offset);
-    // }
-
-    // for(i = 0; i < num_chunks_after; ++i)
-    // {
-    //    initial_chunks[i + num_chunks_before].offset = Any_uint32_GreaterThan(dummy_chunk.offset);
-    // }
-
-    // arg_chunks->count = num_chunks_before + num_chunks_after;
-    // arg_chunks->chunks = initial_chunks;
-
-    // /* Act */
-    // /* NOTE: unsure how to set this up to hit the assert. */
-    // CF_ChunkListAdd(arg_chunks, arg_offset, arg_size);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end
      Test_CF_Chunks_Add_Asserts_WhenInsertPositionIsNotEqualToGiven_chunks_count_And_chunk_offset_IsNotLessThanOrEqToGiven_chunks_i_offset
@@ -1924,16 +1783,6 @@ void Test_CF_Chunks_GetFirstChunk_WhenGiven_chunks_count_Is_Any_index_t_ReturnFi
 
 void Test_CF_Chunks_Init_AssertsBecauseGiven_CF_max_chunks_Is_0(void)
 {
-    // /* Arrange */
-    // CF_ChunkList_t        dummy_chunks;
-    // CF_ChunkList_t*       arg_chunks = &dummy_chunks;
-    // CF_ChunkIdx_t         arg_CF_max_chunks = Any_uint16() + 2; /* 2-65537, uint16 is used instead of CF_ChunkIdx_t
-    // to have a reasonably decent size for the test without being too large (segfault) */ CF_Chunk_t* arg_chunks_mem;
-
-    // /* Act */
-    // CF_ChunkListInit(arg_chunks, arg_CF_max_chunks, arg_chunks_mem);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_Chunks_Init_AssertsBecauseGiven_CF_max_chunks_Is_0 */
 
@@ -1997,67 +1846,18 @@ void Test_CF_ChunksReset_Set_count_To_0_Keeps_CF_max_chunks_AndMemsets_chunks_To
 
 /* CF_ChunkListReset tests */
 
-/*******************************************************************************
-**
-**  CF_ChunkList_ComputeGaps tests (large) - Full coverage - NOTE: This is not a great example of good unit testing.  In
-*the quest for speed and full coverage, liberties with values were taken to find ones that achieved the desired coverage
-*in the CUT.  Values should be more robust and be more indicative of the kind of values that will actually be
-*encountered during operation.  Not enough time could be spent on deciphering intent and the creator of that intent is
-*no longer available.
-**
-*******************************************************************************/
-
 void Test_CF_Chunks_ComputeGaps_AssertsBecauseGiven_total_Is_0(void)
 {
-    // /* Arrange */
-    // CF_ChunkList_t          dummy_chunks;
-    // CF_ChunkList_t*         arg_chunks = &dummy_chunks;
-    // CF_ChunkIdx_t           arg_max_gaps = Any_uint32();
-    // CF_ChunkSize_t      arg_total = 0;
-    // CF_ChunkOffset_t    arg_start = Any_uint32();
-    // CF_ChunkList_ComputeGapFn_t  arg_compute_gap_fn = Dummy_compute_gap_fn_t;
-    // void*             arg_opaque = NULL;
-
-    // /* Act */
-    // CF_ChunkList_ComputeGaps(arg_chunks, arg_max_gaps, arg_total, arg_start, arg_compute_gap_fn, arg_opaque);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_Chunks_ComputeGaps_AssertsBecauseGiven_total_Is_0 */
 
 void Test_CF_Chunks_ComputeGaps_AssertsBecauseGiven_start_IsGreaterThanGiven_total(void)
 {
-    // /* Arrange */
-    // CF_ChunkList_t          dummy_chunks;
-    // CF_ChunkList_t*         arg_chunks = &dummy_chunks;
-    // CF_ChunkIdx_t           arg_max_gaps = Any_uint32();
-    // CF_ChunkSize_t      arg_total = Any_uint32_Except(UINT32_MAX - 1) + 1; /* from 1 to (UINT32_MAX - 1) */
-    // CF_ChunkOffset_t    arg_start = Any_uint32_GreaterThan(arg_total);
-    // CF_ChunkList_ComputeGapFn_t  arg_compute_gap_fn = Dummy_compute_gap_fn_t;
-    // void*             arg_opaque = NULL;
-
-    // /* Act */
-    // CF_ChunkList_ComputeGaps(arg_chunks, arg_max_gaps, arg_total, arg_start, arg_compute_gap_fn, arg_opaque);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_Chunks_ComputeGaps_AssertsBecauseGiven_start_IsGreaterThanGiven_total */
 
 void Test_CF_Chunks_ComputeGaps_AssertsBecauseGiven_start_IsEqToGiven_total(void)
 {
-    // /* Arrange */
-    // CF_ChunkList_t          dummy_chunks;
-    // CF_ChunkList_t*         arg_chunks = &dummy_chunks;
-    // CF_ChunkIdx_t           arg_max_gaps = Any_uint32();
-    // CF_ChunkSize_t      arg_total = Any_uint32_Except(UINT32_MAX) + 1; /* from 1 to UINT32_MAX */
-    // CF_ChunkOffset_t    arg_start = arg_total;
-    // CF_ChunkList_ComputeGapFn_t  arg_compute_gap_fn = Dummy_compute_gap_fn_t;
-    // void*             arg_opaque = NULL;
-
-    // /* Act */
-    // CF_ChunkList_ComputeGaps(arg_chunks, arg_max_gaps, arg_total, arg_start, arg_compute_gap_fn, arg_opaque);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_Chunks_ComputeGaps_AssertsBecauseGiven_start_IsGreaterThanGiven_total */
 

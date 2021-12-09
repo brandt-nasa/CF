@@ -230,16 +230,6 @@ void Test_CF_GetMemcpySize_WhenGiven_num_ElementsAre_0_FromGiven_size_UntilAnoth
 
 void Test_CF_MemcpyToBE_Asserts_src_size_EqTo_0(void)
 {
-    // /* Arrange */
-    // uint8 *     arg_dst;
-    // uint8 *     arg_src;
-    // int         arg_src_size = 0;
-    // int         arg_dst_size = Any_int_Positive();
-
-    // /* Act */
-    // CF_MemcpyToBE(arg_dst, arg_src, arg_src_size, arg_dst_size);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - (src_size>0)&&(dst_size>0)");
 } /* end Test_CF_MemcpyToBE_Asserts_src_size_EqTo_0 */
 
@@ -261,16 +251,6 @@ void Test_CF_MemcpyToBE_Asserts_src_size_EqTo_0(void)
 
 void Test_CF_MemcpyToBE_Asserts_dst_size_EqTo_0(void)
 {
-    // /* Arrange */
-    // uint8 *     arg_dst;
-    // uint8 *     arg_src;
-    // int         arg_src_size = Any_int_Positive();
-    // int         arg_dst_size = 0;
-
-    // /* Act */
-    // CF_MemcpyToBE(arg_dst, arg_src, arg_src_size, arg_dst_size);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - (src_size>0)&&(dst_size>0)");
 } /* end Test_CF_MemcpyToBE_Asserts_dst_size_EqTo_0 */
 
@@ -292,16 +272,6 @@ void Test_CF_MemcpyToBE_Asserts_dst_size_EqTo_0(void)
 
 void Test_CF_MemcpyToBE_Asserts_both_src_size_And_dst_size_Are_0(void)
 {
-    // /* Arrange */
-    // uint8 *     arg_dst;
-    // uint8 *     arg_src;
-    // int         arg_src_size = 0;
-    // int         arg_dst_size = 0;
-
-    // /* Act */
-    // CF_MemcpyToBE(arg_dst, arg_src, arg_src_size, arg_dst_size);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - src_size>=dst_size");
 } /* end Test_CF_MemcpyToBE_Asserts_both_src_size_And_dst_size_Are_0 */
 
@@ -449,16 +419,6 @@ void Test_CF_MemcpyToBE_CopyAllRequisite_src_ValuesInto_dst_When_dst_size_IsEqTo
 
 void Test_CF_MemcpyFromBE_Asserts_src_size_EqTo_0(void)
 {
-    // /* Arrange */
-    // uint8 *     arg_dst;
-    // uint8 *     arg_src;
-    // int         arg_src_size = 0;
-    // int         arg_dst_size = Any_int_Positive();
-
-    // /* Act */
-    // CF_MemcpyFromBE(arg_dst, arg_src, arg_src_size, arg_dst_size);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - (src_size>0)&&(dst_size>0)");
 } /* end Test_CF_MemcpyFromBE_Asserts_src_size_EqTo_0 */
 
@@ -480,16 +440,6 @@ void Test_CF_MemcpyFromBE_Asserts_src_size_EqTo_0(void)
 
 void Test_CF_MemcpyFromBE_Asserts_dst_size_EqTo_0(void)
 {
-    /* Arrange */
-    // uint8 *     arg_dst;
-    // uint8 *     arg_src;
-    // int         arg_src_size = Any_int_Positive();
-    // int         arg_dst_size = 0;
-
-    // /* Act */
-    // CF_MemcpyFromBE(arg_dst, arg_src, arg_src_size, arg_dst_size);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - (src_size>0)&&(dst_size>0)");
 } /* end Test_CF_MemcpyFromBE_Asserts_dst_size_EqTo_0 */
 
@@ -511,17 +461,6 @@ void Test_CF_MemcpyFromBE_Asserts_dst_size_EqTo_0(void)
 
 void Test_CF_MemcpyToBE_Asserts_dst_size_IsLessThan_src_size(void)
 {
-    // /* Arrange */
-    // uint8 *     arg_dst;
-    // uint8 *     arg_src;
-    // int         arg_dst_size = Any_int_ZeroOrPositiveLessThan(INT32_MAX - 2) + 1; /* -2 then +1 for 1 to INT32_MAX -
-    // 1 */ int         arg_src_size = arg_dst_size + 1; /* TODO change to any int greater than? DNE at time of writing
-    // */
-
-    // /* Act */
-    // CF_MemcpyFromBE(arg_dst, arg_src, arg_src_size, arg_dst_size);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - dst_size>=src_size");
 } /* end Test_CF_MemcpyToBE_Asserts_dst_size_IsLessThan_src_size */
 
@@ -936,39 +875,11 @@ void Test_CF_SetVariableHeader_Call_FSV_Twice(void)
 
 void Test_CF_HeaderSize_AssertsWhen_eid_l_IsNotGreaterThan_0(void)
 {
-    // /* Arrange */
-    // CF_CFDP_PduHeader_t      dummy_ph;
-    // CF_CFDP_PduHeader_t*     arg_ph = &dummy_ph;
-    // int32             forced_return_FGV_for_eid_l = Any_int32_Negative(); /* negative forces error */
-    // int32             forced_return_FGV_for_tsn_l = Any_uint8(); /* uint8 used arbitrarily for small size */
-    // int               local_result;
-
-    // UT_SetDeferredRetcode(UT_KEY(FGV), 1, forced_return_FGV_for_eid_l);
-    // UT_SetDeferredRetcode(UT_KEY(FGV), 1, forced_return_FGV_for_tsn_l);
-
-    // /* Act */
-    // local_result = CF_HeaderSize(arg_ph);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - (eid_l>0)&&(tsn_l>0)");
 } /* end Test_CF_HeaderSize_AssertsWhen_eid_l_IsNotGreaterThan_0 */
 
 void Test_CF_HeaderSize_AssertsWhen_tsn_l_IsNotGreaterThan_0(void)
 {
-    // /* Arrange */
-    // CF_CFDP_PduHeader_t      dummy_ph;
-    // CF_CFDP_PduHeader_t*     arg_ph = &dummy_ph;
-    // int32             forced_return_FGV_for_eid_l = Any_uint8(); /* uint8 used arbitrarily for small size */
-    // int32             forced_return_FGV_for_tsn_l = Any_int32_Negative(); /* negative forces error */
-    // int               local_result;
-
-    // UT_SetDeferredRetcode(UT_KEY(FGV), 1, forced_return_FGV_for_eid_l);
-    // UT_SetDeferredRetcode(UT_KEY(FGV), 1, forced_return_FGV_for_tsn_l);
-
-    // /* Act */
-    // local_result = CF_HeaderSize(arg_ph);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - (eid_l>0)&&(tsn_l>0)");
 } /* end Test_CF_HeaderSize_AssertsWhen_tsn_l_IsNotGreaterThan_0 */
 

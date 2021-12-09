@@ -643,62 +643,7 @@ void Test_CFDP_S_SendFileData_CallTo_CF_CFDP_SendFd_Returns_CF_SEND_ERROR_SendEv
 
 void Test_CFDP_S_SendFileData_AssertsWhen_foffs_Plus_bytes_to_read_IsLessThanOrEqTo_t_fsize(void)
 {
-    /* Arrange */
-    // CF_ConfigTable_t     dummy_config_table;
-    // CF_History_t             dummy_history;
-    // CF_Transaction_t         dummy_t;
-    // CF_Transaction_t*        arg_t = &dummy_t;
-    // uint32                arg_foffs = Any_uint32();
-    // uint32                arg_bytes_to_read = Any_uint16_Except(0); /* Any_uint16_Except(0) used to limit to same
-    // type as CF_AppData.config_table->outgoing_file_chunk_size */ uint8                 arg_calc_crc = Any_uint8();
-    // CF_CFDP_PduHeader_t          dummy_ph;
-    // CF_CFDP_PduHeader_t*         forced_return_CF_CFDP_ConstructPduHeader = &dummy_ph;
-    // uint32                expected_bytes_to_read = arg_bytes_to_read;
-    // int32                 forced_return_CF_WrappedRead = expected_bytes_to_read;
-    // CF_CFDP_SendFd_context_t    context_CF_CFDP_SendFd;
-
-    // dummy_config_table.outgoing_file_chunk_size = arg_bytes_to_read; /* forces bytes_to_read to be greater than
-    // CF_AppData.config_table->outgoing_file_chunk_size (run if block) */ CF_AppData.config_table =
-    // &dummy_config_table;
-
-    // arg_t->history = &dummy_history;
-
-    // UT_SetHandlerFunction(UT_KEY(CF_CFDP_ConstructPduHeader), Handler_CF_CFDP_ConstructPduHeader_ForceReturnOnly,
-    // &forced_return_CF_CFDP_ConstructPduHeader);
-
-    // arg_t->state_data.s.cached_pos = arg_foffs;
-
-    // UT_SetDefaultReturnValue(UT_KEY(CF_WrappedRead), forced_return_CF_WrappedRead);
-
-    // UT_SetHookFunction(UT_KEY(CFE_EVS_SendEvent), stub_reporter_hook, &context_CFE_EVS_SendEvent);
-
-    // context_CF_CFDP_SendFd.forced_return = CF_SendRet_ERROR;
-    // UT_SetDataBuffer(UT_KEY(CF_CFDP_SendFd), &context_CF_CFDP_SendFd,
-    //   sizeof(context_CF_CFDP_SendFd), false);
-
-    // UT_SetHookFunction(UT_KEY(CFE_EVS_SendEvent), stub_reporter_hook, &context_CFE_EVS_SendEvent);
-
-    /* Act */
-    // result = CF_CFDP_S_SendFileData(arg_t, arg_foffs, arg_bytes_to_read, arg_calc_crc);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_Assert((foffs+bytes_to_read)<=t->fsize); /* sanity check */");
-    // UtAssert_True(result == -1,
-    //   "CF_TxnState_S_SendFileData returned %d and should be -1 (fail)",
-    //   result);
-    // UtAssert_STUB_COUNT(CF_WrappedLseek, 0);
-    // UtAssert_STUB_COUNT(CF_WrappedRead, 1);
-    // UtAssert_STUB_COUNT(CF_CFDP_SendFd, 1);
-    // UtAssert_STUB_COUNT(CFE_EVS_SendEvent, 1);
-    // UtAssert_True(context_CFE_EVS_SendEvent.EventID == CF_EID_ERR_CFDP_S_SEND_FD,
-    //   "CFE_EVS_SendEvent received EventID %u and should have received %u (CF_EID_ERR_CFDP_S_SEND_FD)",
-    //   context_CFE_EVS_SendEvent.EventID, CF_EID_ERR_CFDP_S_SEND_FD);
-    // UtAssert_True(context_CFE_EVS_SendEvent.EventType == CFE_EVS_EventType_ERROR,
-    //   "CFE_EVS_SendEvent received EventType %u and should have received %u (CFE_EVS_EventType_ERROR)",
-    //   context_CFE_EVS_SendEvent.EventType, CFE_EVS_EventType_ERROR);
-    // UtAssert_StrCmp(context_CFE_EVS_SendEvent.Spec, expected_Spec,
-    //   "CFE_EVS_SendEvent received expected Spec\n'%s' - Received\n'%s' - Expected",
-    //   context_CFE_EVS_SendEvent.Spec, expected_Spec);
 } /* end Test_CFDP_S_SendFileData_AssertsWhen_foffs_Plus_bytes_to_read_IsLessThanOrEqTo_t_fsize */
 
 // TODO: Test_CFDP_S_SendFileData a test for where foffs+bytes to read is more than fsize and Asserts
@@ -1345,27 +1290,6 @@ void Test_CF_CFDP_S_CheckAndRespondNak_CallTo_CF_Chunks_GetFirstChunkReturned_no
 **
 *******************************************************************************/
 
-/* NOTE: EXAMPLE: Here is the example of what the next test would look like IFF we could stub.
-** compare it to the test that had items that could not be stubbed. */
-// void
-// Test_CF_CFDP_S2_SubstateSendFileData_CallTo_CF_CFDP_S_CheckAndRespondNak_Returns_0_Call_CF_CFDP_S_SubstateSendFileData(void)
-// {
-//     //Arrange
-//     CF_Transaction_t   dummy_t;
-//     CF_Transaction_t*  arg_t = &dummy_t;
-
-//     UT_SetDefaultReturnValue(CF_CFDP_S_CheckAndRespondNak, 0);
-
-//     //Act
-//     CF_CFDP_S2_SubstateSendFileData(arg_t);
-
-//     //Assert
-//     UtAssert_STUB_COUNT(CF_CFDP_S_SubstateSendFileData, 1);
-//     UtAssert_STUB_COUNT(CF_CFDP_S_Reset, 0);
-// } /* end
-// Test_CF_CFDP_S2_SubstateSendFileData_CallTo_CF_CFDP_S_CheckAndRespondNak_Returns_0_Call_CF_CFDP_S_SubstateSendFileData
-// */
-
 void Test_CF_CFDP_S2_SubstateSendFileData_CallTo_CF_CFDP_S_CheckAndRespondNak_Returns_0_Call_CF_CFDP_S_SubstateSendFileData(
     void)
 {
@@ -1411,26 +1335,6 @@ void Test_CF_CFDP_S2_SubstateSendFileData_CallTo_CF_CFDP_S_CheckAndRespondNak_Re
      Test_CF_CFDP_S2_SubstateSendFileData_CallTo_CF_CFDP_S_CheckAndRespondNak_Returns_0_Call_CF_CFDP_S_SubstateSendFileData
    */
 
-/* NOTE: EXAMPLE: Here is the example of what the next test would look like IFF we could stub.
-** compare it to the test that had items that could not be stubbed. */
-// void
-// Test_CF_CFDP_S2_SubstateSendFileData_CF_CFDP_S_CheckAndRespondNak_ReturnsNegativeValue_Call_CF_CFDP_S_Reset(void)
-// {
-//     //Arrange
-//     CF_Transaction_t   dummy_t;
-//     CF_Transaction_t*  arg_t = &dummy_t;
-
-//     UT_SetDefaultReturnValue(CF_CFDP_S_CheckAndRespondNak, Any_int_Negative());
-
-//     //Act
-//     CF_CFDP_S2_SubstateSendFileData(arg_t);
-
-//     //Assert
-//     UtAssert_STUB_COUNT(CF_CFDP_S_SubstateSendFileData, 0);
-//     UtAssert_STUB_COUNT(CF_CFDP_S_Reset, 1);
-// } /* end Test_CF_CFDP_S2_SubstateSendFileData_CF_CFDP_S_CheckAndRespondNak_ReturnsNegativeValue_Call_CF_CFDP_S_Reset
-// */
-
 void Test_CF_CFDP_S2_SubstateSendFileData_CF_CFDP_S_CheckAndRespondNak_ReturnsNegativeValue_Call_CF_CFDP_S_Reset(void)
 {
     /* Arrange */
@@ -1453,24 +1357,6 @@ void Test_CF_CFDP_S2_SubstateSendFileData_CF_CFDP_S_CheckAndRespondNak_ReturnsNe
     /* Assert for CF_CFDP_S_Reset */
     UtAssert_STUB_COUNT(CF_CFDP_ResetTransaction, 1);
 } /* end Test_CF_CFDP_S2_SubstateSendFileData_CF_CFDP_S_CheckAndRespondNak_ReturnsNegativeValue_Call_CF_CFDP_S_Reset */
-
-/* NOTE: EXAMPLE: Here is the example of what the next test would look like IFF we could stub.
-** compare it to the test that had items that could not be stubbed. */
-// void Test_CF_CFDP_S2_SubstateSendFileData_CallTo_CF_CFDP_S_CheckAndRespondNak_ReturnsPositiveValueDoNothing(void)
-// {
-//     //Arrange
-//     CF_Transaction_t   dummy_t;
-//     CF_Transaction_t*  arg_t = &dummy_t;
-
-//     UT_SetDefaultReturnValue(CF_CFDP_S_CheckAndRespondNak, Any_int_Positive());
-
-//     //Act
-//     CF_CFDP_S2_SubstateSendFileData(arg_t);
-
-//     //Assert
-//     UtAssert_STUB_COUNT(CF_CFDP_S_SubstateSendFileData, 0);
-//     UtAssert_STUB_COUNT(CF_CFDP_S_Reset, 0);
-// } /* end Test_CF_CFDP_S2_SubstateSendFileData_CallTo_CF_CFDP_S_CheckAndRespondNak_ReturnsPositiveValueDoNothing */
 
 void Test_CF_CFDP_S2_SubstateSendFileData_CallTo_CF_CFDP_S_CheckAndRespondNak_ReturnsPositiveValueDoNothing(void)
 {
@@ -2283,9 +2169,6 @@ void Test_CF_CFDP_S2_Nak_CallTo_CF_CFDP_RecvNak_Returns_0_Set_num_sr_to_0_SendEv
 
 void Test_CF_CFDP_S2_Nak_CallTo_CF_CFDP_Asserts_num_sr_IsGreaterThan_CF_NAK_MAX_SEGMENTS(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 issue");
 } /* end Test_CF_CFDP_S2_Nak_CallTo_CF_CFDP_Asserts_num_sr_IsGreaterThan_CF_NAK_MAX_SEGMENTS */
 
@@ -2739,26 +2622,11 @@ void Test_CF_CFDP_S2_WaitForEofAck_CallTo_CF_CFDP_RecvAck_Returns_0_And_t_histor
 
 void Test_CF_CFDP_S_DispatchRecv_Asserts_sub_state_LessThan_SEND_NUM_STATES(void)
 {
-    /* Arrange */
-    // CF_Transaction_t   dummy_t;
-    // CF_Transaction_t*  arg_t = &dummy_t;
-    // void *          arg_fns = NULL;
-
-    // arg_t->state_data.s.sub_state = CF_TxSubState_NUM_STATES;
-
-    /* Act */
-    // CF_CFDP_S_DispatchRecv(arg_t, arg_fns);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 issue");
-    // UtAssert_STUB_COUNT(CF_HandleAssert, 1);
 } /* end Test_CF_CFDP_S_DispatchRecv_Asserts_sub_state_LessThan_SEND_NUM_STATES */
 
 void Test_CF_CFDP_S_DispatchRecv_Asserts_msg_in_Is_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 issue");
 } /* end Test_CF_CFDP_S_DispatchRecv_Asserts_msg_in_Is_NULL */
 
@@ -3112,9 +2980,6 @@ void Test_CF_CFDP_S2_Recv_Call_CF_CFDP_S_DispatchRecv(void)
 
 void Test_CF_CFDP_S1_Tx_Asserts_t_sub_state_IsGreaterThan_SEND_EOF(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 issue - t->state_data.s.sub_state<=CF_TxSubState_EOF");
 } /* end Test_CF_CFDP_S1_Tx_Asserts_t_sub_state_IsGreaterThan_SEND_EOF */
 
@@ -3211,9 +3076,6 @@ void Test_CF_CFDP_S1_Tx_When_t_sub_state_Is_0_Call_CF_CFDP_S_SubstateSendMetadat
 
 void Test_CF_CFDP_S2_Tx_Asserts_t_sub_state_IsGreaterThan_SEND_EOF(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 issue");
 } /* end Test_CF_CFDP_S2_Tx_Asserts_t_sub_state_IsGreaterThan_SEND_EOF */
 

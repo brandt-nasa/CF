@@ -143,11 +143,6 @@ void Test_CF_Timer_Expired_When_t_tick_IsAnyIntegerExcept_0_Return_0(void)
 
 void Test_CF_Timer_TickAssertsBecause_t_tick_Is_0(void)
 {
-    // /* Arrange */
-
-    // /* Act */
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->tick");
 } /* Test_CF_Timer_TickAssertsBecause_t_tick_Is_0 */
 

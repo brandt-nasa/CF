@@ -1752,19 +1752,6 @@ void Test_CF_CFDP_R2_SubstateRecvFileData_t_flags_rx_fd_nak_sent_Is_0_And_t_flag
 
 void Test_CF_CFDP_R2_GapCompute_AssertsWhenGiven_c_size_Is_0(void)
 {
-    // /* Arrange */
-    // CF_ChunkList_t*             arg_chunks;
-    // CF_Chunk_t               dummy_c;
-    // CF_Chunk_t*              arg_c = &dummy_c;
-    // gap_compute_args_t    dummy_args;
-    // void*                 arg_opaque = &dummy_args;
-
-    // arg_c->size = 0;
-
-    // /* Act */
-    // CF_CFDP_R2_GapCompute(arg_chunks, arg_c, arg_opaque);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - c->size>0");
 } /* end Test_CF_CFDP_R2_GapCompute_AssertsWhenGiven_c_size_Is_0 */
 
@@ -1866,38 +1853,7 @@ void Test_CF_CFDP_R_SubstateSendNak_Given_t_md_recv_Is_0_SendEvent_CallTo_CF_CFD
 void Test_CF_CFDP_R_SubstateSendNak_AssertsBecauseGiven_t_md_recv_Is_0_SendEvent_CallTo_CF_CFDP_SendNak_CannotReturn_CF_SEND_ERROR_ButDoesAnyway(
     void)
 {
-    // /* Arrange */
-    // CF_History_t         dummy_history;
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t = &dummy_t;
-    // CF_CFDP_PduNak_t         dummy_nak;
-    // CF_CFDP_PduHeader_t*     dummy_ph = (CF_CFDP_PduHeader_t*)&dummy_nak;
-    // CF_CFDP_ConstructPduHeader_context_t  context_CF_CFDP_ConstructPduHeader;
-    // CF_CFDP_SendNak_context_t   context_CF_CFDP_SendNak;
-    // int               local_result;
-
-    // arg_t->history = &dummy_history;
-    // arg_t->flags.rx.md_recv = 0;
-
-    // context_CF_CFDP_ConstructPduHeader.forced_return = dummy_ph;
-    // UT_SetDataBuffer(UT_KEY(CF_CFDP_ConstructPduHeader), &context_CF_CFDP_ConstructPduHeader,
-    //   sizeof(context_CF_CFDP_ConstructPduHeader), false);
-
-    // context_CF_CFDP_SendNak.forced_return = CF_SendRet_ERROR;
-    // UT_SetDataBuffer(UT_KEY(CF_CFDP_SendNak), &context_CF_CFDP_SendNak,
-    //   sizeof(context_CF_CFDP_SendNak), false);
-
-    // /* Act */
-    // local_result = CF_CFDP_R_SubstateSendNak(arg_t);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - sret!=CF_SendRet_ERROR");
-    // UtAssert_True(local_result == -1,
-    //   "CF_CFDP_R_SubstateSendNak returned %d and should be -1",
-    //   local_result);
-    // UtAssert_STUB_COUNT(CF_CFDP_ConstructPduHeader, 1);
-    // UtAssert_STUB_COUNT(CFE_EVS_SendEvent, 1);
-    // UtAssert_STUB_COUNT(CF_CFDP_SendNak, 1);
 } /* end
      Test_CF_CFDP_R_SubstateSendNak_AssertsBecauseGiven_t_md_recv_Is_0_SendEvent_CallTo_CF_CFDP_SendNak_CannotReturn_CF_SEND_ERROR_ButDoesAnyway
    */
@@ -1981,42 +1937,7 @@ void Test_CF_CFDP_R_SubstateSendNak_Given_t_md_recv_Is_1_CallTo_CF_Chunks_Comput
 void Test_CF_CFDP_R_SubstateSendNak_AssertsBecauseGiven_t_md_recv_Is_1_CallTo_CF_Chunks_ComputeGaps_Returns_non0_CallTo_CF_CFDP_SendNak_CannotReturn_CF_SEND_ERROR_ButDoesAnyway(
     void)
 {
-    // /* Arrange */
-    // CF_ChunkWrapper_t  dummy_chunks;
-    // CF_History_t         dummy_history;
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t = &dummy_t;
-    // CF_CFDP_PduNak_t         dummy_nak;
-    // CF_CFDP_PduHeader_t*     dummy_ph = (CF_CFDP_PduHeader_t*)&dummy_nak;
-    // CF_CFDP_ConstructPduHeader_context_t  context_CF_CFDP_ConstructPduHeader;
-    // CF_CFDP_SendNak_context_t   context_CF_CFDP_SendNak;
-
-    // arg_t->history = &dummy_history;
-    // arg_t->flags.rx.md_recv = 1;
-
-    // context_CF_CFDP_ConstructPduHeader.forced_return = dummy_ph;
-    // UT_SetDataBuffer(UT_KEY(CF_CFDP_ConstructPduHeader), &context_CF_CFDP_ConstructPduHeader,
-    //   sizeof(context_CF_CFDP_ConstructPduHeader), false);
-
-    // UT_SetDefaultReturnValue(UT_KEY(CF_ChunkList_ComputeGaps), Any_uint32_Except(0));
-
-    // context_CF_CFDP_SendNak.forced_return = CF_SendRet_ERROR;
-    // UT_SetDataBuffer(UT_KEY(CF_CFDP_SendNak), &context_CF_CFDP_SendNak,
-    //   sizeof(context_CF_CFDP_SendNak), false);
-
-    // arg_t->chunks = &dummy_chunks;
-
-    // /* Act */
-    // local_result = CF_CFDP_R_SubstateSendNak(arg_t);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - sret!=CF_SendRet_ERROR");
-    // UtAssert_True(local_result == -1,
-    //   "CF_CFDP_R_SubstateSendNak returned %d and should be -1",
-    //   local_result);
-    // UtAssert_STUB_COUNT(CF_CFDP_ConstructPduHeader, 1);
-    // UtAssert_STUB_COUNT(CFE_EVS_SendEvent, 1);
-    // UtAssert_STUB_COUNT(CF_CFDP_SendNak, 1);
 } /* end
      Test_CF_CFDP_R_SubstateSendNak_AssertsBecauseGiven_t_md_recv_Is_1_CallTo_CF_Chunks_ComputeGaps_Returns_non0_CallTo_CF_CFDP_SendNak_CannotReturn_CF_SEND_ERROR_ButDoesAnyway
    */
@@ -2733,22 +2654,6 @@ void Test_CF_CFDP_R2_SubstateSendFin_Given_t_history_cc_IsEqTo_CC_NO_ERROR_And_t
 
 void Test_CF_CFDP_R2_SubstateSendFin_AssertsBecauseCallTo_CF_CFDP_SendFin_Returns_CF_SEND_ERROR(void)
 {
-    // /* Arrange */
-    // CF_History_t         dummy_history;
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t = &dummy_t;
-    // int               local_result;
-
-    // arg_t->history = &dummy_history;
-    // arg_t->history->cc = Any_uint8_Except(CF_CFDP_ConditionCode_NO_ERROR);
-    // arg_t->flags.com.crc_calc = 0;
-
-    // UT_SetDefaultReturnValue(UT_KEY(CF_CFDP_SendFin), CF_SendRet_ERROR);
-
-    // /* Act */
-    // //local_result = CF_CFDP_R2_SubstateSendFin(arg_t);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - sret!=CF_SendRet_ERROR");
 } /* end Test_CF_CFDP_R2_SubstateSendFin_AssertsBecauseCallTo_CF_CFDP_SendFin_Returns_CF_SEND_ERROR */
 
@@ -3244,9 +3149,6 @@ void Test_CF_CFDP_R2_RecvMd_Given_t_flags_rx_md_recv_Is_0_CallTo_CF_CFDP_RecvMd_
 
 void Test_CFDP_R_DispatchRecv_AssertsBecause_sub_state_IsEqTo_RECV_NUM_STATES(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->state_data.r.sub_state<CF_RxSubState_NUM_STATES");
 } /* end Test_CFDP_R_DispatchRecv_AssertsBecause_sub_state_IsEqTo_RECV_NUM_STATES */
 
@@ -3262,9 +3164,6 @@ void Test_CFDP_R_DispatchRecv_AssertsBecause_sub_state_IsEqTo_RECV_NUM_STATES(vo
 
 void Test_CFDP_R_DispatchRecv_AssertsBecause_msg_in_Is_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_AppData.engine.in.msg");
 } /* end Test_CFDP_R_DispatchRecv_AssertsBecause_msg_in_Is_NULL */
 
@@ -3999,36 +3898,6 @@ void Test_CF_CFDP_R_Tick_Given_t_state_IsEqTo_CFDP_R2_And_inactivity_fired_Is_0_
 void Test_CF_CFDP_R_Tick_Given_t_state_IsEqTo_CFDP_R2_And_inactivity_fired_Is_1_And_send_ack_Is_1_AssertsBecause_CF_CFDP_SendAck_Returns_CF_SEND_ERROR(
     void)
 {
-    // /* Arrange */
-    // CF_History_t           dummy_history;
-    // CF_Transaction_t       dummy_t;
-    // CF_Transaction_t*      arg_t = &dummy_t;
-    // int                 arg_cont = Any_int();
-
-    // arg_t->state = CF_TxnState_R2;
-
-    // arg_t->flags.rx.inactivity_fired = 0;
-
-    // UT_SetDefaultReturnValue(UT_KEY(CF_Timer_Expired), 1); /* 0 = false */
-
-    // arg_t->flags.rx.send_ack = 0;
-
-    // arg_t->flags.rx.send_nak = 0;
-
-    // arg_t->flags.rx.send_fin = 0;
-
-    // arg_t->flags.com.ack_timer_armed = 0;
-
-    // /* Arrange for CF_CFDP_R_SendInactivityEvent */
-    // UT_SetDataBuffer(UT_KEY(CFE_EVS_SendEvent), &EventID,
-    //   sizeof(EventID), false);
-    // arg_t->history = &dummy_history;
-    // arg_t->chan_num = Any_cf_chan_num();
-
-    // /* Act */
-    // CF_CFDP_R_Tick(arg_t, arg_cont);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - sret!=CF_SendRet_ERROR");
 } /* end
      Test_CF_CFDP_R_Tick_Given_t_state_IsEqTo_CFDP_R2_And_inactivity_fired_Is_1_And_send_ack_Is_1_AssertsBecause_CF_CFDP_SendAck_Returns_CF_SEND_ERROR

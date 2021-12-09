@@ -76,46 +76,16 @@ void DummyFunctionFor_CF_TraverseAllTransactions_(CF_Transaction_t *t, void *con
 
 void Test_cf_dequeue_transaction_AssertsBecause_t_IsNull(void)
 {
-    // /* Arrange */
-    // CF_Transaction_t   *arg_t = NULL;
-
-    // /* Act */
-    // CF_DequeueTransaction(arg_t);
-
-    // /* Assert */
-    // UtAssert_STUB_COUNT(CF_HandleAssert, 1);
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t");
 } /* end Test_cf_dequeue_transaction_AssertsBecause_t_IsNull */
 
 void Test_cf_dequeue_transaction_AssertsBecause_t_chan_num_LessThan_CF_NUM_CHANNELS(void)
 {
-    // /* Arrange */
-    // CF_Transaction_t   arg_t;
-    // CF_CListNode_t *      *expected_qs =
-    //   &CF_AppData.engine.channels[arg_t.chan_num].qs[arg_t.flags.com.q_index];
-    // uint8           dummy_chan_num =
-    //   Any_uint8_GreaterThan_or_EqualTo(CF_NUM_CHANNELS);
-
-    // arg_t.chan_num = dummy_chan_num;
-
-    // /* Act */
-    // CF_DequeueTransaction(&arg_t);
-
-    // /* Assert */
-    // UtAssert_STUB_COUNT(CF_HandleAssert, 1);
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->chan_num<CF_NUM_CHANNELS");
 } /* end Test_cf_dequeue_transaction_AssertsBecause_t_chan_num_LessThan_CF_NUM_CHANNELS */
 
 void Test_cf_dequeue_transaction_AssertsBecause_q_size_Eq0(void)
 {
-    // /* Arrange */
-    // CF_Transaction_t   *arg_t = NULL;
-
-    // /* Act */
-    // CF_DequeueTransaction(arg_t);
-
-    // /* Assert */
-    // UtAssert_STUB_COUNT(CF_HandleAssert, 1);
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_AppData.hk.channel_hk[t->chan_num].q_size[t->flags.com.q_index]");
 } /* end Test_cf_dequeue_transaction_AssertsBecause_q_size_Eq0 */
 
@@ -157,31 +127,16 @@ void Test_cf_dequeue_transaction_Call_CF_CList_Remove_AndDecrement_q_size(void)
 
 void Test_cf_move_transaction_AssertsBecause_t_IsNull(void)
 {
-    // /* Arrange */
-
-    // /* Act */
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t");
 } /* end Test_cf_move_transaction_AssertsBecause_t_IsNull */
 
 void Test_cf_move_transaction_AssertsBecause_t_chan_num_LessThan_CF_NUM_CHANNELS(void)
 {
-    // /* Arrange */
-
-    // /* Act */
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->chan_num<CF_NUM_CHANNELS");
 } /* end Test_cf_move_transaction_AssertsBecause_t_chan_num_LessThan_CF_NUM_CHANNELS */
 
 void Test_cf_move_transaction_AssertsBecause_channel_hk_Has_q_size_Eq0(void)
 {
-    // /* Arrange */
-
-    // /* Act */
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_AppData.hk.channel_hk[t->chan_num].q_size[t->flags.com.q_index]");
 } /* end Test_cf_move_transaction_AssertsBecause_channel_hk_Has_q_size_Eq0 */
 
@@ -237,26 +192,6 @@ void Test_cf_move_transaction_Call_CF_CList_InsertBack_AndSet_q_index_ToGiven_q(
 
 void Test_CF_CList_Remove_Ex_AssertsBecause_q_size_Eq0(void)
 {
-    // /* Arrange */
-    // CF_Channel_t           dummy_c;
-    // CF_Channel_t*          arg_c = &dummy_c;
-    // CF_QueueIdx_t    arg_index = Any_cf_queue_index_t();
-    // CF_CListNode_t *          arg_node;
-    // CF_CListNode_t **         expected_remove_head;
-    // CF_CListNode_t *          expected_remove_node;
-
-    // CF_Clist_Remove_context_t context_clist_remove;
-    // UT_SetDataBuffer(UT_KEY(CF_CList_Remove), &context_clist_remove,
-    //   sizeof(context_clist_remove), false);
-    //
-    // expected_remove_head = &arg_c->qs[arg_index];
-
-    // CF_AppData.hk.channel_hk[arg_c-CF_AppData.engine.channels].q_size[arg_index] = 0;
-
-    // /* Act */
-    // CF_CList_Remove_Ex(arg_c, arg_index, arg_node);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_AppData.hk.channel_hk[c-CF_AppData.engine.channels].q_size[index]");
 } /* end Test_CF_CList_Remove_Ex_AssertsBecause_q_size_Eq0 */
 
@@ -379,22 +314,6 @@ void Test_CF_CList_InsertBack_Ex_Call_CF_CList_InsertBack_AndIncrement_q_size(vo
 
 void Test_CF_TraverseHistory_AssertsBecause_h_dir_GreaterThan_CF_DIR_NUM(void)
 {
-    // /* Arrange */
-    // CF_History_t       dummy_h;
-    // CF_CListNode_t *      arg_n = &dummy_h.cl_node;
-    // trav_arg_t      dummy_context;
-    // trav_arg_t*     arg_context = &dummy_context;
-    //
-    // dummy_h.src_eid = Any_uint8();
-    // dummy_h.seq_num = Any_uint32();
-    // dummy_h.dir = Any_direction_t();
-    // dummy_h.peer_eid = Any_uint8();
-    // dummy_h.cc = Any_condition_code_t();
-
-    // /* Act */
-    // CF_TraverseHistory(arg_n, arg_context);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - h->dir<CF_Direction_NUM");
 
 } /* end Test_CF_TraverseHistory_AssertsBecause_h_dir_GreaterThan_CF_DIR_NUM */
@@ -781,21 +700,11 @@ void Test_CF_PrioSearch_When_t_PrioIsLessThanContextPrio_Set_context_t_To_t_AndR
 
 void Test_CF_InsertSortPrio_AssertsBecause_t_chan_num_LessThan_CF_NUM_CHANNELS(void)
 {
-    // /* Arrange */
-
-    // /* Act */
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->chan_num<CF_NUM_CHANNELS");
 } /* end Test_CF_InsertSortPrio_AssertsBecause_t_chan_num_LessThan_CF_NUM_CHANNELS */
 
 void Test_CF_InsertSortPrio_AssertsBecause_t_state_IsNot_CFDP_IDLE(void)
 {
-    // /* Arrange */
-
-    // /* Act */
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->state!=CF_TxnState_IDLE");
 } /* end Test_CF_InsertSortPrio_AssertsBecause_t_state_IsNot_CFDP_IDLE */
 

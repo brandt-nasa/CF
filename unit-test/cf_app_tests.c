@@ -641,9 +641,6 @@ void Test_CF_ProcessMsg_WakeUp(void)
 void Test_CF_ProcessMsg_SendHk(void)
 {
     /* Arrange */
-    /* TODO: figure out if message is required here - not used at time of writing this */
-    // CFE_MSG_Message_t   dummy_Msg;
-    // CFE_SB_Buffer_t     dummy_msg;
     CFE_SB_Buffer_t *arg_msg      = NULL;
     CFE_SB_MsgId_t   forced_MsgID = CF_SEND_HK_MID;
 

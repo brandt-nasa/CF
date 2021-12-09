@@ -1584,11 +1584,6 @@ void Test_CF_TsnChanAction_cmd_FailBecause_cmd_chan_IsInvalid(void)
 
 void Test_CF_DoSuspRes__Asserts_t_Is_NULL(void)
 {
-    // /* Arrange */
-
-    // /* Act */
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_DoSuspRes__Asserts_t_Is_NULL */
 

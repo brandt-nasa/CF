@@ -90,33 +90,21 @@ void Test_CF_CList_InitNode_PointNodeToItselfAsNextAndPrev(void)
 
 void Test_CF_CList_InsertFront_AssertsBecauseHeadIs_NULL(void)
 {
-    // /* Arrange */
-    // /* Act */
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - head");
 } /* end Test_CF_CList_InsertFront_AssertsBecauseHeadIs_NULL */
 
 void Test_CF_CList_InsertFront_AssertsBecauseNodeIs_NULL(void)
 {
-    // /* Arrange */
-    // /* Act */
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert- node");
 } /* end Test_CF_CList_InsertFront_AssertsBecauseNodeIs_NULL */
 
 void Test_CF_CList_InsertFront_AssertsBecauseNodeNextDoesNotPointToItself(void)
 {
-    // /* Arrange */
-    // /* Act */
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - node->next==node");
 } /* end Test_CF_CList_InsertFront_AssertsBecauseNodeNextDoesNotPointToItself */
 
 void Test_CF_CList_InsertFront_AssertsBecauseNodePrevDoesNotPointToItself(void)
 {
-    // /* Arrange */
-    // /* Act */
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - node->prev==node");
 } /* end Test_CF_CList_InsertFront_AssertsBecauseNodePrevDoesNotPointToItself */
 
@@ -277,33 +265,21 @@ void Test_CF_CList_InsertFront_WhenNodeListIsGreaterThanTwoNodesAndTheyPointToCo
 
 void Test_CF_CList_InsertBack_AssertsBecauseHeadIs_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - head");
 } /* end Test_CF_CList_InsertBack_AssertsBecauseHeadIs_NULL */
 
 void Test_CF_CList_InsertBack_AssertsBecauseNodeIs_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - node");
 } /* end Test_CF_CList_InsertBack_AssertsBecauseNodeIs_NULL */
 
 void Test_CF_CList_InsertBack_AssertsBecauseNodeNextDoesNotPointToItself(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - node->next==node");
 } /* end Test_CF_CList_InsertBack_AssertsBecauseNodeNextDoesNotPointToItself */
 
 void Test_CF_CList_InsertBack_AssertsBecauseNodePrevDoesNotPointToItself(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - node->prev==node");
 } /* end Test_CF_CList_InsertBack_AssertsBecauseNodePrevDoesNotPointToItself */
 
@@ -463,9 +439,6 @@ void Test_CF_CList_InsertBack_WhenNodeListIsGreaterThanTwoNodesAndTheyPointToCor
 
 void Test_CF_CList_Pop_AssertsBecause_head_Is_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - head");
 } /* end  Test_CF_CList_Pop_AssertsBecause_head_Is_NULL */
 
@@ -567,41 +540,21 @@ void Test_CF_CList_Pop_WhenListIsAnySizeGreaterThanOneSuccessPopsHeadNodeAndRetu
 
 void Test_CF_CList_Remove_AssertsBecauseHeadIs_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - head");
 } /* end Test_CF_CList_Remove_AssertsBecauseHeadIs_NULL */
 
 void Test_CF_CList_Remove_AssertsBecauseNodeIs_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - node");
 } /* end Test_CF_CList_Remove_AssertsBecauseNodeIs_NULL */
 
 void Test_CF_CList_Remove_AssertsBecauseHeadPointedAtValueIs_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - *head");
 } /* end Test_CF_CList_Remove_AssertsBecauseHeadPointedAtValueIs_NULL */
 
 void Test_CF_ClistRemove_AssertsBecauseHeadPointedAtValueIsNotNode(void)
 {
-    /* Arrange */
-    CF_CListNode_t  dummy_node;
-    CF_CListNode_t *arg_node = &dummy_node;
-
-    arg_node->prev = arg_node;
-    arg_node->next = arg_node;
-
-    /* Act */
-    // CF_CList_Remove(arg_head, arg_node);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - node==*head");
 } /* end Test_CF_ClistRemove_AssertsBecauseHeadPointedAtValueIsNotNode */
 
@@ -864,30 +817,6 @@ void Test_CF_ClistRemove_RemovingAnyNodeHasNodesPrevAndNextPointToEachOther(void
 
 void Test_CF_CList_Remove_ReceivesBad_node_Because_next_PointsTo_node_But_prev_DoesNot(void)
 {
-    // /* Arrange */
-    // CF_CListNode_t    dummy_head_node;
-    // CF_CListNode_t *      dummy_head = &dummy_head_node;
-    // CF_CListNode_t **     arg_head = &dummy_head;
-    // CF_CListNode_t    dummy_last_node;
-    // CF_CListNode_t *      arg_node = &dummy_last_node;
-
-    // dummy_head->prev = dummy_head;
-    // dummy_head->next = dummy_head;
-
-    // /* setting bad node */
-    // arg_node->prev = dummy_head;
-    // arg_node->next = arg_node;
-
-    // /* Act */
-    // CF_CList_Remove(arg_head, arg_node);
-
-    // /* Assert */
-    // UtAssert_ADDRESS_EQ(*arg_head, &dummy_head_node);
-    // UtAssert_ADDRESS_EQ(dummy_head->prev, dummy_head);
-    // UtAssert_ADDRESS_EQ(dummy_head->next, dummy_head);
-    // /* Assert for CF_CList_InitNode - note this cannot be verified because node state does not change */
-    // UtAssert_ADDRESS_EQ(arg_node->prev, arg_node);
-    // UtAssert_ADDRESS_EQ(arg_node->next, arg_node);
     UtAssert_MIR("JIRA: GSFCCFS-1719 Odd behavior - Is this desired?\n"
                  "A bad node is passed to CF_CList_Remove, but it carries on unaware\n"
                  "This was found because branch 3 of if((node->next==node)&&(node->prev==node))\n"
@@ -904,63 +833,21 @@ void Test_CF_CList_Remove_ReceivesBad_node_Because_next_PointsTo_node_But_prev_D
 
 void Test_CF_CList_InsertAfter_AssertsBecause_head_Is_NULL(void)
 {
-    /* Arrange */
-    // CF_CListNode_t **     arg_head = NULL;
-    // CF_CListNode_t *      arg_start;
-    // CF_CListNode_t *      arg_after;
-
-    /* Act */
-    // CF_CList_InsertAfter(arg_head, arg_start, arg_after);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - head");
 } /* end CF_CList_InsertAfter_AssertsBecause_head_Is_NULL */
 
 void Test_CF_CList_InsertAfter_AssertsBecauseValueAt_head_Is_NULL(void)
 {
-    /* Arrange */
-    // CF_CListNode_t *      dummy_head = NULL;
-    // CF_CListNode_t **     arg_head = &dummy_head;
-    // CF_CListNode_t *      arg_start;
-    // CF_CListNode_t *      arg_after;
-
-    /* Act */
-    // CF_CList_InsertAfter(arg_head, arg_start, arg_after);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - *head");
 } /* end Test_CF_CList_InsertAfter_AssertsBecauseValueAt_head_Is_NULL */
 
 void Test_CF_CList_InsertAfter_AssertsBecause_start_Is_NULL(void)
 {
-    /* Arrange */
-    // CF_CListNode_t    dummy_head_node;
-    // CF_CListNode_t *      dummy_head = &dummy_head_node;
-    // CF_CListNode_t **     arg_head = &dummy_head;
-    // CF_CListNode_t *      arg_start = NULL;
-    // CF_CListNode_t *      arg_after;
-
-    /* Act */
-    // CF_CList_InsertAfter(arg_head, arg_start, arg_after);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - start");
 } /* end Test_CF_CList_InsertAfter_AssertsBecause_start_Is_NULL */
 
 void Test_CF_CList_InsertAfter_AssertsBecause_start_IsEqTo_after(void)
 {
-    /* Arrange */
-    // CF_CListNode_t    dummy_head_node;
-    // CF_CListNode_t *      dummy_head = &dummy_head_node;
-    // CF_CListNode_t **     arg_head = &dummy_head;
-    // CF_CListNode_t    dummy_start_node;
-    // CF_CListNode_t *      arg_start = &dummy_start_node;
-    // CF_CListNode_t *      arg_after = arg_start;
-
-    /* Act */
-    // CF_CList_InsertAfter(arg_head, arg_start, arg_after);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - start!=after");
 } /* end Test_CF_CList_InsertAfter_AssertsBecause_start_Is_NULL */
 

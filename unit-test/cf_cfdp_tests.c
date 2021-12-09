@@ -374,16 +374,6 @@ void Test_CF_CFDP_ArmAckTimer_Call_CF_Timer_InitRelSec_WithCorrectParamsAndArmsT
 
 void Test_CF_CFDP_GetClass_AssertsBecause_q_index_IsEqTo_CF_Q_FREE(void)
 {
-    /* Arrange */
-    // CF_Transaction_t   dummy_ti;
-    // CF_Transaction_t*  arg_ti = &dummy_ti;
-
-    // arg_ti->flags.com.q_index = CF_QueueIdx_FREE;
-
-    // /* Act */
-    // //CF_CFDP_GetClass(arg_ti);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 
 } /* end Test_CF_CFDP_GetClass_AssertsBecause_q_index_IsEqTo_CF_Q_FREE */
@@ -453,16 +443,6 @@ void Test_CF_CFDP_GetClass_WhenStateIs_CFDP_R2_Return_CLASS_1(void)
 
 void Test_CF_CFDP_IsSender_AssertsBecause_q_index_IsEqTo_CF_Q_FREE(void)
 {
-    // /* Arrange */
-    // CF_Transaction_t   dummy_ti;
-    // CF_Transaction_t*  arg_ti = &dummy_ti;
-
-    // arg_ti->flags.com.q_index = CF_QueueIdx_FREE;
-
-    // /* Act */
-    // CF_CFDP_IsSender(arg_ti);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_IsSender_AssertsBecause_q_index_IsEqTo_CF_Q_FREE */
 
@@ -563,16 +543,6 @@ void Test_CF_CFDP_ArmInactTimer_Call_CF_Timer_InitRelSec_WithCorrectParams(void)
 
 void Test_CF_CFDP_DispatchRecv_AssertsBecause_t_state_EqTo_CFDP_INVALID(void)
 {
-    // /* Arrange */
-    // CF_Transaction_t           dummy_t;
-    // CF_Transaction_t*          arg_t = &dummy_t;
-
-    // arg_t->state = CF_TxnState_INVALID;
-
-    // /* Act */
-    // CF_CFDP_DispatchRecv(arg_t);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->state<CF_TxnState_INVALID");
 
 } /* end Test_CF_CFDP_DispatchRecv_AssertsBecause_t_state_EqTo_CFDP_INVALID */
@@ -580,16 +550,6 @@ void Test_CF_CFDP_DispatchRecv_AssertsBecause_t_state_EqTo_CFDP_INVALID(void)
 /* TODO: Test_CF_CFDP_DispatchRecv_AssertsBecause_t_state_GreaterThan_CFDP_INVALID not required but desired */
 // void Test_CF_CFDP_DispatchRecv_AssertsBecause_t_state_GreaterThan_CFDP_INVALID(void)
 // {
-//     /* Arrange */
-//     CF_Transaction_t           dummy_t;
-//     CF_Transaction_t*          arg_t = &dummy_t;
-
-//     arg_t->state = Any_uint8_GreaterThan(CF_TxnState_INVALID);
-
-//     /* Act */
-//     //CF_CFDP_DispatchRecv(arg_t);
-
-//     /* Assert */
 //     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->state<CF_TxnState_INVALID");
 // } /* end Test_CF_CFDP_DispatchRecv_AssertsBecause_t_state_GreaterThan_CFDP_INVALID */
 
@@ -723,79 +683,29 @@ void Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_INVALID(void)
 /* TODO: Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_GreaterThanOrEqTo_CFDP_INVALID desired but not required */
 // void Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_GreaterThanOrEqTo_CFDP_INVALID(void)
 // {
-//     /* Arrange */
-//     CF_Transaction_t           dummy_t;
-//     CF_Transaction_t*          arg_t = &dummy_t;
-
-//     arg_t->state = Any_uint8_GreaterThan(CF_TxnState_INVALID);
-
-//     /* Act */
-//     //CF_CFDP_DispatchTx(arg_t);
-
-//     /* Assert */
 //     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 // } /* end Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_GreaterThanOrEqTo_CFDP_INVALID */
 
 void Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_IDLE(void)
 {
-    // /* Arrange */
-    // CF_Transaction_t           dummy_t;
-    // CF_Transaction_t*          arg_t = &dummy_t;
-
-    // arg_t->state = CF_TxnState_IDLE;
-
-    // /* Act */
-    // CF_CFDP_DispatchTx(arg_t);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_IDLE */
 
 /* TODO: Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_R1 desired but not required */
 // void Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_R1(void)
 // {
-//     /* Arrange */
-//     CF_Transaction_t           dummy_t;
-//     CF_Transaction_t*          arg_t = &dummy_t;
-
-//     arg_t->state = CF_TxnState_R1;
-
-//     /* Act */
-//     //CF_CFDP_DispatchTx(arg_t);
-
-//     /* Assert */
 //     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 // } /* end Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_R1 */
 
 /* TODO: Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_R2 desired but not required */
 // void Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_R2(void)
 // {
-//     /* Arrange */
-//     CF_Transaction_t           dummy_t;
-//     CF_Transaction_t*          arg_t = &dummy_t;
-
-//     arg_t->state = CF_TxnState_R2;
-
-//     /* Act */
-//     //CF_CFDP_DispatchTx(arg_t);
-
-//     /* Assert */
 //     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 // } /* end Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_R2 */
 
 /* TODO: Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_DROP desired but not required */
 // void Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_DROP(void)
 // {
-//     /* Arrange */
-//     CF_Transaction_t           dummy_t;
-//     CF_Transaction_t*          arg_t = &dummy_t;
-
-//     arg_t->state = CF_TxnState_DROP;
-
-//     /* Act */
-//     //CF_CFDP_DispatchTx(arg_t);
-
-//     /* Assert */
 //     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 // } /* end Test_CF_CFDP_DispatchTx_AssertsBecause_t_state_EqTo_CFDP_DROP */
 
@@ -847,46 +757,17 @@ void Test_CF_CFDP_DispatchTx_Call_When_t_state_EqTo_CFDP_S2_CF_CFDP_S1_Tx(void)
 
 void Test_CF_CFDP_FindUnusedChunks_AssertsBecause_dir_IsEq_CF_DIR_NUM(void)
 {
-    /* Arrange */
-    // CF_Channel_t       dummy_c;
-    // CF_Channel_t*      arg_c = &dummy_c;
-    // CF_Direction_t     arg_dir = CF_Direction_NUM;
-
-    /* Act */
-    // CF_CFDP_FindUnusedChunks(arg_c, arg_dir);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_FindUnusedChunks_AssertsBecause_dir_IsEq_CF_DIR_NUM */
 
 /* TODO: Test_CF_CFDP_FindUnusedChunks_AssertsBecause_dir_IsGreaterThan_CF_DIR_NUM desired but not required */
 // void Test_CF_CFDP_FindUnusedChunks_AssertsBecause_dir_IsGreaterThan_CF_DIR_NUM(void)
 // {
-//     /* Arrange */
-//     // CF_Channel_t       dummy_c;
-//     // CF_Channel_t*      arg_c = &dummy_c;
-//     // CF_Direction_t     arg_dir = Any_uint8_GreaterThan(CF_Direction_NUM);
-
-//     /* Act */
-//     //CF_CFDP_FindUnusedChunks(arg_c, arg_dir);
-
-//     /* Assert */
 //     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 // } /* end Test_CF_CFDP_FindUnusedChunks_AssertsBecause_dir_IsGreaterThan_CF_DIR_NUM */
 
 void Test_CF_CFDP_FindUnusedChunks_AssertsBecause_c_cs_dir_IsNull(void)
 {
-    /* Arrange */
-    // CF_Channel_t       dummy_c;
-    // CF_Channel_t*      arg_c = &dummy_c;
-    // CF_Direction_t     arg_dir = Any_direction_t();
-
-    // arg_c->cs[arg_dir] = NULL;
-
-    /* Act */
-    // CF_CFDP_FindUnusedChunks(arg_c, arg_dir);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_FindUnusedChunks_AssertsBecause_c_cs_dir_IsNull */
 
@@ -928,38 +809,17 @@ void Test_CF_CFDP_FindUnusedChunks_Success(void)
 
 void Test_CF_CFDP_FindUnusedTransaction_AssertsBecause_c_IsNull(void)
 {
-    // /* Arrange */
-    // CF_Channel_t*          arg_c;
-
-    // /* Act */
-    // CF_CFDP_FindUnusedTransaction(arg_c);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_FindUnusedTransaction_WhenNoFreeTransactionsAreAvailableReturn_NULL */
 
 void Test_CF_CFDP_FindUnusedTransaction_AssertsBecause_q_size_CF_Q_HIST_IsNotLessThan_CF_NUM_HISTORIES_PER_CHANNEL(void)
 {
-    // /* Arrange */
-    // CF_Channel_t*          arg_c;
-
-    // /* Act */
-    // CF_CFDP_FindUnusedTransaction(arg_c);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_FindUnusedTransaction_AssertsBecause_q_size_CF_Q_HIST_IsNotLessThan_CF_NUM_HISTORIES_PER_CHANNEL
    */
 
 void Test_CF_CFDP_FindUnusedTransaction_AssertsBecause_c_qs_CF_Q_HIST_IsNull(void)
 {
-    // /* Arrange */
-    // CF_Channel_t*          arg_c;
-
-    // /* Act */
-    // CF_CFDP_FindUnusedTransaction(arg_c);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_FindUnusedTransaction_AssertsBecause_c_qs_CF_Q_HIST_IsNull */
 
@@ -1699,28 +1559,12 @@ void Test_CF_CFDP_MsgOutGet_When_sem_name_0_Is_0_Then_CallTo_OS_CountSemTimedWai
 
 void Test_CF_CFDP_Send_AssertsBecause_chan_num_IsEqTo_CF_NUM_CHANNELS(void)
 {
-    // /* Arrange */
-    // uint8         arg_chan_num = CF_NUM_CHANNELS;
-    // uint32        arg_len;
-
-    // /* Act */
-    // CF_CFDP_Send(arg_chan_num, arg_len);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_Send_AssertsBecause_chan_num_IsEqTo_CF_NUM_CHANNELS */
 
 /* TODO: Test_CF_CFDP_Send_AssertsBecause_chan_num_IsGreaterThanTo_CF_NUM_CHANNELS not required but desired */
 // void Test_CF_CFDP_Send_AssertsBecause_chan_num_IsGreaterThanTo_CF_NUM_CHANNELS(void)
 // {
-//     /* Arrange */
-//     // uint8         arg_chan_num = Any_uint8_GreaterThan(CF_NUM_CHANNELS);
-//     // uint32        arg_len;
-
-//     /* Act */
-//     //CF_CFDP_Send(arg_chan_num, arg_len);
-
-//     /* Assert */
 //     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 // } /* end Test_CF_CFDP_Send_AssertsBecause_chan_num_IsGreaterThanTo_CF_NUM_CHANNELS */
 
@@ -1973,38 +1817,6 @@ void Test_CF_CFDP_SendMd_GetNull_pdu_header_Return_CF_SEND_NO_MSG(void)
 
 void Test_CF_CFDP_SendMd_AssertsBecause_state_NotEq_CFDP_S1_Or_CFDP_S2(void)
 {
-    /* Arrange */
-    // pdu_msg_t         dummy_msg_out;
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t = &dummy_t;
-    // CF_SendRet_t   local_result;
-    // int               excepted_states[2] = {CF_TxnState_S1, CF_TxnState_S2};
-
-    // arg_t->state = Any_cfdp_state_t_ExceptThese(excepted_states,
-    //   sizeof(excepted_states)/sizeof(excepted_states[0]));
-
-    // /* Arrange unstubbable: CF_CFDP_MsgOutGet */
-    // CF_ConfigTable_t   dummy_config_table;
-
-    // CF_AppData.config_table = &dummy_config_table;
-    // arg_t->chan_num = Any_uint8_LessThan(CF_NUM_CHANNELS);
-    // CF_AppData.engine.outgoing_counter = Any_uint32_Except(0);
-    // CF_AppData.config_table->chan[arg_t->chan_num].max_outgoing_messages_per_wakeup =
-    //   CF_AppData.engine.outgoing_counter + 1;
-    // CF_AppData.hk.channel_hk[arg_t->chan_num].frozen = 0;
-    // arg_t->flags.com.suspended = 0;
-    // CF_AppData.engine.out.msg = (CFE_SB_Buffer_t*)&dummy_msg_out;
-
-    // arg_t->flags.com.q_index = CF_QueueIdx_PEND; /* arg_t->flags.com.q_index = CF_QueueIdx_PEND ensures
-    // ti->flags.com.q_index!=CF_QueueIdx_FREE is never false */
-
-    /* Act */
-    // local_result = CF_CFDP_SendMd(arg_t);
-
-    /* Assert */
-    /* This causes 3 branches to not be taken */
-    UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - (t->state == CF_TxnState_S1) || (t->state == CF_TxnState_S2)");
-    UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - (t->state == CF_TxnState_S1) || (t->state == CF_TxnState_S2)");
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - (t->state == CF_TxnState_S1) || (t->state == CF_TxnState_S2)");
 } /* end Test_CF_CFDP_SendMd_AssertsBecause_state_NotEq_CFDP_S1_Or_CFDP_S2 */
 
@@ -2092,84 +1904,12 @@ void Test_CF_CFDP_SendMd_When_dst_len_Eq_sizeof_dst_filename_Return_CF_SEND_FAIL
 
 void Test_CF_CFDP_SendMd_Returns_CF_SEND_ERROR_CF_CFDP_CopyDataToLv_Returns_neg1_On_src_Call(void)
 {
-    // /* Arrange */
-    // CF_CFDP_PduMd_t          dummy_msg_out;
-    // CF_History_t         dummy_history;
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t = &dummy_t;
-    // CF_SendRet_t   local_result;
-    // uint8             passing_states[2] = {CF_TxnState_S1, CF_TxnState_S2};
-    // size_t            src_filename_size = Any_uint8_LessThan(sizeof(arg_t->history->fnames.src_filename));
-    // size_t            dst_filename_size = Any_uint8_LessThan(sizeof(arg_t->history->fnames.dst_filename));
-
-    // arg_t->history = &dummy_history;
-    // AnyRandomStringOfLettersOfLengthCopy(arg_t->history->fnames.src_filename, src_filename_size);
-    // AnyRandomStringOfLettersOfLengthCopy(arg_t->history->fnames.dst_filename, dst_filename_size);
-    // arg_t->state = Any_uint8_FromThese(passing_states, sizeof(passing_states)/sizeof(passing_states[0]));
-
-    // /* Arrange unstubbable: CF_CFDP_MsgOutGet */
-    // CF_ConfigTable_t   dummy_config_table;
-
-    // CF_AppData.config_table = &dummy_config_table;
-    // arg_t->chan_num = Any_uint8_LessThan(CF_NUM_CHANNELS);
-    // CF_AppData.engine.outgoing_counter = 0;
-    // CF_AppData.config_table->chan[arg_t->chan_num].max_outgoing_messages_per_wakeup = 1;
-    // CF_AppData.hk.channel_hk[arg_t->chan_num].frozen = 0;
-    // arg_t->flags.com.suspended = 0;
-    // CF_AppData.engine.out.msg = (CFE_SB_Buffer_t*)&dummy_msg_out;
-
-    // arg_t->flags.com.q_index = CF_QueueIdx_PEND; /* arg_t->flags.com.q_index = CF_QueueIdx_PEND ensures
-    // ti->flags.com.q_index!=CF_QueueIdx_FREE is never false */
-
-    // /* Arrange unstubbable: CF_CFDP_CopyDataToLv */
-    // /* no way to arrange it to fail */
-
-    // /* Act */
-    // local_result = CF_CFDP_SendMd(arg_t);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCFCS-1737 Unable to stub CF_CFDP_CopyDataToLv -- cannot hit if(ret<0) for src\nComment in "
                  "code states it 'should not happen' and it cannot be forced to fail.");
 } /* end Test_CF_CFDP_SendMd_Returns_CF_SEND_ERROR_CF_CFDP_CopyDataToLv_Returns_neg1_On_src_Call */
 
 void Test_CF_CFDP_SendMd_WhenCallTo_CF_CFDP_CopyDataToLv_Returns_neg1_OnThe_dst_Call_Return_CF_SEND_ERROR(void)
 {
-    // /* Arrange */
-    // CF_CFDP_PduMd_t          dummy_msg_out;
-    // CF_History_t         dummy_history;
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t = &dummy_t;
-    // CF_SendRet_t   local_result;
-    // uint8             passing_states[2] = {CF_TxnState_S1, CF_TxnState_S2};
-    // size_t            src_filename_size = Any_uint8_LessThan(sizeof(arg_t->history->fnames.src_filename));
-    // size_t            dst_filename_size = Any_uint8_LessThan(sizeof(arg_t->history->fnames.dst_filename));
-
-    // arg_t->history = &dummy_history;
-    // AnyRandomStringOfLettersOfLengthCopy(arg_t->history->fnames.src_filename, src_filename_size);
-    // AnyRandomStringOfLettersOfLengthCopy(arg_t->history->fnames.dst_filename, dst_filename_size);
-    // arg_t->state = Any_uint8_FromThese(passing_states, sizeof(passing_states)/sizeof(passing_states[0]));
-
-    // /* Arrange unstubbable: CF_CFDP_MsgOutGet */
-    // CF_ConfigTable_t   dummy_config_table;
-
-    // CF_AppData.config_table = &dummy_config_table;
-    // arg_t->chan_num = Any_uint8_LessThan(CF_NUM_CHANNELS);
-    // CF_AppData.engine.outgoing_counter = 0;
-    // CF_AppData.config_table->chan[arg_t->chan_num].max_outgoing_messages_per_wakeup = 1;
-    // CF_AppData.hk.channel_hk[arg_t->chan_num].frozen = 0;
-    // arg_t->flags.com.suspended = 0;
-    // CF_AppData.engine.out.msg = (CFE_SB_Buffer_t*)&dummy_msg_out;
-
-    // arg_t->flags.com.q_index = CF_QueueIdx_PEND; /* arg_t->flags.com.q_index = CF_QueueIdx_PEND ensures
-    // ti->flags.com.q_index!=CF_QueueIdx_FREE is never false */
-
-    // /* Arrange for CF_CFDP_CopyDataToLv */
-    // /* no way to arrange it to fail */
-
-    // /* Act */
-    // local_result = CF_CFDP_SendMd(arg_t);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCFCS-1737 Unable to stub CF_CFDP_CopyDataToLv -- cannot hit if(ret<0) for dst\nComment in "
                  "code states it 'should not happen' and it cannot be forced to fail.");
 } /* end Test_CF_CFDP_SendMd_WhenCallTo_CF_CFDP_CopyDataToLv_Returns_neg1_OnThe_dst_Call_Return_CF_SEND_ERROR */
@@ -2464,42 +2204,6 @@ void Test_CF_CFDP_SendAck_When_CF_CFDP_IsSender_Returns_false_Get_NULL_ph_Return
 
 void Test_CF_CFDP_SendAck_AssertsBecauseGiven_dir_code_Is_Not_PDU_EOF_Or_PDU_FIN(void)
 {
-    // /* Arrange */
-    // CF_CFDP_PduAck_t                   dummy_ack;
-    // CF_ConfigTable_t           dummy_config_table;
-    // CF_History_t                   dummy_history;
-    // uint8                       dummy_transaction_num = Any_uint8_LessThan(CF_NUM_TRANSACTIONS);
-    // CF_Transaction_t*              arg_t = &CF_AppData.engine.transactions[dummy_transaction_num];
-    // CF_CFDP_AckTxnStatus_t    arg_ts = Any_uint8();
-    // uint8                       exceptions[2] = {CF_CFDP_FileDirective_EOF, CF_CFDP_FileDirective_FIN};
-    // CF_CFDP_FileDirective_t            arg_dir_code = Any_uint8_ExceptThese(exceptions, 2);
-    // CF_CFDP_ConditionCode_t            arg_cc = Any_uint8();
-    // CF_EntityId_t              arg_peer_eid = Any_uint8();
-    // CF_TransactionSeq_t        arg_tsn = Any_uint8();
-    // CF_SendRet_t             local_result;
-
-    // CF_AppData.config_table = &dummy_config_table;
-    // arg_t->history = &dummy_history;
-
-    // /* Arrange for CF_CFDP_IsSender */
-    // arg_t->flags.com.q_index = Any_uint8_LessThan(CF_QueueIdx_FREE);
-    // arg_t->state = CF_TxnState_S1; /* ensures true from CF_CFDP_IsSender */
-
-    // /* Arrange for CF_CFDP_ConstructPduHeader */
-    // /* Arrange for CF_CFDP_MsgOutGet */
-    // CF_AppData.engine.out.msg = (CFE_SB_Buffer_t*)&dummy_ack;
-    // CF_AppData.config_table->chan[arg_t->chan_num].max_outgoing_messages_per_wakeup = 0;
-
-    // CF_AppData.hk.channel_hk[arg_t->chan_num].frozen = 0;
-    // arg_t->flags.com.suspended = 0;
-
-    // /* Act */
-    // local_result = CF_CFDP_SendAck(arg_t, arg_ts, arg_dir_code, arg_cc, arg_peer_eid, arg_tsn);
-
-    // /* Assert */
-    // UtAssert_True(local_result == CF_SendRet_NO_MSG,
-    //   "CF_CFDP_SendAck returned %u and should be %u (CF_SendRet_NO_MSG)",
-    //   local_result, CF_SendRet_NO_MSG);
     UtAssert_MIR(
         "JIRA: GSFCCFS-1733 CF_Assert - (dir_code==CF_CFDP_FileDirective_EOF)||(dir_code==CF_CFDP_FileDirective_FIN)");
 } /* end Test_CF_CFDP_SendAck_AssertsBecauseGiven_dir_code_Is_Not_PDU_EOF_Or_PDU_FIN */
@@ -2716,43 +2420,11 @@ void Test_CF_CFDP_SendFin_Given_cc_EqTo_CC_NO_ERROR_GetNull_ph_Return_CF_SEND_SU
 
 void Test_CF_CFDP_SendNak_GetNull_ph_Return_CF_SEND_NO_MSG(void)
 {
-    // /* Arrange */
-    // uint8               dummy_transaction_num = Any_uint8_LessThan(CF_NUM_TRANSACTIONS);
-    // CF_Transaction_t*      arg_t = &CF_AppData.engine.transactions[dummy_transaction_num];
-    // int                 arg_num_segment_requests = 0;
-    // CF_SendRet_t     local_result;
-
-    // ((CF_PduSendMsg_t*)CF_AppData.engine.out.msg)->ph = NULL;
-
-    // /* Act */
-    // local_result = CF_CFDP_SendNak(arg_t, arg_num_segment_requests);
-
-    // /* Assert */
-    // UtAssert_True(local_result == CF_SendRet_NO_MSG,
-    //   "CF_CFDP_SendNak returned %u and should be %u (CF_SendRet_NO_MSG)",
-    //   local_result, CF_SendRet_NO_MSG);
     UtAssert_MIR("JIRA: GSFCCFS-1689 if statement to return CF_SendRet_NO_MSG");
 } /* end Test_CF_CFDP_SendNak_GetNull_ph_Return_CF_SEND_NO_MSG */
 
 void Test_CF_CFDP_SendNak_AssertsBecause_CF_CFDP_GetClass_With_t_Eq_CLASS_2(void)
 {
-    // /* Arrange */
-    // CF_CFDP_PduNak_t           dummy_nak;
-    // uint8               dummy_transaction_num = Any_uint8_LessThan(CF_NUM_TRANSACTIONS);
-    // CF_Transaction_t*      arg_t = &CF_AppData.engine.transactions[dummy_transaction_num];
-    // int                 arg_num_segment_requests;
-    // CF_SendRet_t     local_result;
-
-    // CF_AppData.engine.out.msg = (CFE_SB_Buffer_t*)&dummy_nak;
-
-    // /* Arrange for CF_CFDP_GetClass */
-    // arg_t->flags.com.q_index = Any_uint8_LessThan(CF_QueueIdx_FREE);
-    // arg_t->state = CF_TxnState_S1; /* ensures failre */
-
-    // /* Act */
-    // local_result = CF_CFDP_SendNak(arg_t, arg_num_segment_requests);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_CFDP_GetClass(t)==CF_CFDP_CLASS_2");
 } /* end Test_CF_CFDP_SendNak_AssertsBecause_CF_CFDP_GetClass_With_t_Eq_CLASS_2 */
 
@@ -2804,17 +2476,11 @@ void Test_CF_CFDP_SendNak_Success_Return_CF_SEND_SUCCESS(void)
 
 void Test_CF_CFDP_RecvPh_AssertsBecause_chan_num_GreaterThan_CF_NUM_CHANNELS(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - chan_num<CF_NUM_CHANNELS");
 } /* end Test_CF_CFDP_RecvPh_AssertsBecause_chan_num_GreaterThan_CF_NUM_CHANNELS */
 
 void Test_CF_CFDP_RecvPh_AssertsBecause_msg_in_Is_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_AppData.engine.in.msg");
 } /* end Test_CF_CFDP_RecvPh_AssertsBecause_msg_in_Is_NULL */
 
@@ -3052,11 +2718,6 @@ void Test_CF_CFDP_RecvPh_ValueOf_temp_Plus_hsize_NotEq_bytes_received_Count_pdu_
 
 void Test_CF_CFDP_RecvMd_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL(void)
 {
-    // /* Arrange */
-    // CF_AppData.engine.in.msg = NULL;
-
-    // /* Act */
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_RecvMd_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL */
 
@@ -3268,9 +2929,6 @@ void Test_CF_CFDP_RecvMd_WhenNoErrorConditions_SendEventAndReturn_0(void)
 
 void Test_CF_CFDP_RecvFd_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL(void)
 {
-    // /* Arrange */
-    // /* Act */
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_AppData.engine.in.msg");
 } /* end Test_CF_CFDP_RecvFd_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL */
 
@@ -3319,7 +2977,6 @@ void Test_CF_CFDP_RecvFd_When_bytes_received_LessThan_sizeof_pdu_file_data_heade
      Test_CF_CFDP_RecvFd_When_bytes_received_LessThan_sizeof_pdu_file_data_header_t_CountsErrorAndReturns_neg1_FailAndSendsEvent
    */
 
-/* TODO: EXAMPLE: Good example of why not checking things is not verifying behavior */
 void Test_CF_CFDP_RecvFd_When_bytes_received_EqTo_sizeof_pdu_file_data_header_t_ByteSwaps_fd_fdh_offset_Success(void)
 {
     /* Arrange */
@@ -3396,9 +3053,6 @@ void Test_CF_CFDP_RecvFd_When_bytes_received_GreaterThan_sizeof_pdu_file_data_he
 
 void Test_CF_CFDP_RecvEof_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_AppData.engine.in.msg");
 } /* end Test_CF_CFDP_RecvEof_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL */
 
@@ -3505,9 +3159,6 @@ void Test_CF_CFDP_RecvEof_BytesReceivedGreaterThan_offsetof_fault_location_Calls
 
 void Test_CF_CFDP_RecvAck_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL(void)
 {
-    // /* Arrange */
-    // /* Act */
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_AppData.engine.in.msg");
 } /* end Test_CF_CFDP_RecvAck_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL */
 
@@ -3594,9 +3245,6 @@ void Test_CF_CFDP_RecvAck_SuccessBecause_bytes_received_GreaterThan_sizeof_pdu_a
 
 void Test_CF_CFDP_RecvFin_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL(void)
 {
-    // /* Arrange */
-    // /* Act */
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_AppData.engine.in.msg");
 } /* end Test_CF_CFDP_RecvFin_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL */
 
@@ -3715,17 +3363,11 @@ void Test_CF_CFDP_RecvFin_SuccessBecause_bytes_received_IsGreaterThan_offsetof_p
 
 void Test_CF_CFDP_RecvNak_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - CF_AppData.engine.in.msg");
 } /* end Test_CF_CFDP_RecvNak_AssertsBecause_CF_AppData_engine_msg_in_Is_NULL */
 
 void Test_CF_CFDP_RecvNak_AssertsBecause_num_segment_requests_Is_NULL(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - num_segment_requests");
 } /* end Test_CF_CFDP_RecvNak_AssertsBecause_num_segment_requests_Is_NULL */
 
@@ -3968,16 +3610,6 @@ void Test_CF_CFDP_RecvDrop_IncrementsCounterIn_CF_AppData_AndItRollsOver(void)
 
 void Test_CF_CFDP_RecvIdle_AssertBecause_CF_AppData_engine_in_msg_Is_NULL(void)
 {
-    // /* Arrange */
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t = &dummy_t;
-
-    // CF_AppData.engine.in.msg = NULL;
-
-    // /* Act */
-    // CF_CFDP_RecvIdle(arg_t);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_RecvIdle_AssertBecause_CF_AppData_engine_in_msg_Is_NULL */
 
@@ -4638,41 +4270,6 @@ void Test_CF_CFDP_InitEngine_FirstCallTo_OS_CountSemGetIdByNamel_Returns_nonOS_S
 void Test_CF_CFDP_InitEngine_AssertsBecause_chunk_mem_offset_Plus_CF_max_chunks_k_i_IsLessThan_CF_NUM_CHUNKS_ALL_CHANNELS(
     void)
 {
-    // /* Arrange */
-    // CF_ConfigTable_t   dummy_config_table;
-    // const char*         expected_Spec = "CF: failed to get sem id for name %s, error=0x%08x";
-    // uint8               i = 0;
-
-    // UT_SetDefaultReturnValue(UT_KEY(CFE_SB_CreatePipe), CFE_SUCCESS);
-
-    // UT_SetDefaultReturnValue(UT_KEY(CFE_SB_SubscribeLocal), CFE_SUCCESS);
-
-    // CF_AppData.config_table = &dummy_config_table;
-    // CF_AppData.config_table->chan[i].sem_name[0] = 1; /* 1 forces branch to run */
-
-    // for(i=1; i<CF_NUM_CHANNELS; ++i)
-    // {
-    //   CF_AppData.config_table->chan[i].sem_name[0] = 0; /* 0 means always bypass the branch */
-    // }
-
-    // UT_SetDefaultReturnValue(UT_KEY(OS_CountSemGetIdByName), OS_SUCCESS);
-
-    // CF_AppData.engine.enabled = 0;
-
-    // /* Act */
-    // result = CF_CFDP_InitEngine();
-
-    // /* Assert */
-    // UtAssert_INT32_EQ(result, CFE_SUCCESS);
-    // UtAssert_STUB_COUNT(CFE_EVS_SendEvent, 0);
-    // UtAssert_STUB_COUNT(CFE_SB_CreatePipe, CF_NUM_CHANNELS);
-    // UtAssert_STUB_COUNT(CFE_SB_SubscribeLocal, CF_NUM_CHANNELS);
-    // UtAssert_STUB_COUNT(OS_CountSemGetIdByName, 1);
-    // UtAssert_True(CF_AppData.engine.enabled == 1,
-    //   "CF_AppData.engine.enabled is %u and should be 1",
-    //   CF_AppData.engine.enabled);
-    // /* NOTE: not sure how to make this one fail as none of the items in this Assert are controllable,
-    // chunk_mem_offset is local variable only, the other two are constants */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - (chunk_mem_offset+CF_max_chunks[k][i])<=CF_NUM_CHUNKS_ALL_CHANNELS");
 } /* end
      Test_CF_CFDP_InitEngine_AssertsBecause_chunk_mem_offset_Plus_CF_max_chunks_k_i_IsLessThan_CF_NUM_CHUNKS_ALL_CHANNELS
@@ -4901,74 +4498,6 @@ void Test_CF_CFDP_ReceiveMessage_CallTo_CF_CFDP_FindTransactionBySequenceNumber_
 
 void Test_CF_CFDP_ReceiveMessage_AssertsBecause_t_state_IsGreaterThan_CFDP_IDLE(void)
 {
-    // /* Arrange */
-    // uint8               dummy_chan_num = Any_cf_chan_num();
-    // CF_ConfigTable_t   dummy_config_table;
-    // CF_Channel_t*          arg_c;
-    // CF_PduRecvMsg_t         dummy_msg;
-
-    // arg_c = &CF_AppData.engine.channels[dummy_chan_num];
-
-    // CF_AppData.config_table = &dummy_config_table;
-    // CF_AppData.config_table->chan[dummy_chan_num].rx_max_messages_per_wakeup = 1; /* 1 forces for loop to run */
-
-    // UT_SetDefaultReturnValue(UT_KEY(CFE_SB_ReceiveBuffer), Any_CFE_Status_t_Except(CFE_SB_NO_MESSAGE));
-
-    // CF_AppData.engine.in.msg = (CFE_SB_Buffer_t*)&dummy_msg;
-
-    // /* Arrange for CF_CFDP_RecvPh */
-    // int               forced_return_CF_HeaderSize = Any_int_Positive();/* Any_int_Positive() used because this is
-    // what the CUT sees, in practice this will be relatively small I, ASG, would think */ size_t
-    // forced_return_CFE_SB_GetUserDataLength = forced_return_CF_HeaderSize + Any_uint16();/* Any_CFE_MSG_Size_t not
-    // used because only need a small number here */ int               forced_return_CF_GetVariableHeader = 0;
-
-    // /* CF_Assert(chan_num<CF_NUM_CHANNELS) covered by arg_c = &CF_AppData.engine.channels[dummy_chan_num] */
-    // /* CF_Assert(CF_AppData.engine.in.msg) covered by CF_AppData.engine.in.msg = (CFE_SB_Buffer_t*)&dummy_msg; */
-
-    // UT_SetHandlerFunction(UT_KEY(CF_HeaderSize), Handler_int_ForcedReturnOnly, &forced_return_CF_HeaderSize);
-
-    // UT_SetHandlerFunction(UT_KEY(CFE_SB_GetUserDataLength), Handler_size_t_ForcedReturnOnly,
-    // &forced_return_CFE_SB_GetUserDataLength);
-
-    // UT_SetHandlerFunction(UT_KEY(CF_GetVariableHeader), Handler_int_ForcedReturnOnly,
-    // &forced_return_CF_GetVariableHeader);
-
-    // dummy_msg.ph.length = forced_return_CFE_SB_GetUserDataLength - forced_return_CF_HeaderSize; /* ensures equality
-    // so (temp+hsize)==CF_AppData.engine.in.bytes_received */
-
-    // /* Arrange for CF_CFDP_FindTransactionBySequenceNumber */
-    // uint8                   i = 0;
-    // CF_Transaction_t           dummy_t;
-    // CF_Transaction_t*          forced_t_result = &dummy_t;
-    // CF_CList_Traverse_FIND_T_BY_SEQ_NUM_context_t  context_CF_CList_Traverse[NUM_CLISTS];
-
-    // type_of_context_CF_CList_Traverse = FIND_T_BY_SEQ_NUM;
-
-    // UT_SetDataBuffer(UT_KEY(CF_CList_Traverse), &context_CF_CList_Traverse,
-    //   sizeof(context_CF_CList_Traverse), false);
-
-    // for(i = 0; i < NUM_CLISTS - 1; ++i)
-    // {
-    //   context_CF_CList_Traverse[i].context_forced_t = NULL;
-    // }
-
-    // forced_t_result->state = CF_TxnState_R1;
-    // context_CF_CList_Traverse[NUM_CLISTS - 1].context_forced_t = forced_t_result;
-
-    // /* Act */
-    // CF_CFDP_ReceiveMessage(arg_c);
-
-    // /* Assert */
-    // UtAssert_STUB_COUNT(CFE_SB_ReceiveBuffer, 1);
-    // UtAssert_STUB_COUNT(CFE_ES_PerfLogAdd, 2);
-    // UtAssert_NULL(CF_AppData.engine.in.msg);
-    // /* Assert for CF_CFDP_RecvPh */
-    // UtAssert_STUB_COUNT(CF_HeaderSize, 1);
-    // UtAssert_STUB_COUNT(CF_GetVariableHeader, 1);
-    // /* Assert for CF_CFDP_FindTransactionBySequenceNumber */
-    // UtAssert_STUB_COUNT(CF_CList_Traverse, NUM_CLISTS);
-    // /* Assert for CF_CFDP_DispatchRecv via CF_CFDP_ArmInactTimer */
-    // UtAssert_STUB_COUNT(CF_Timer_InitRelSec, 1);
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->state>CF_TxnState_IDLE");
 } /* end Test_CF_CFDP_ReceiveMessage_AssertsBecause_t_state_IsGreaterThan_CFDP_IDLE */
 
@@ -5654,92 +5183,6 @@ void Test_CF_CFDP_ReceiveMessage_CallTo_Then_CallTo_CF_CFDP_RecvFin_Returns_0_Ca
 void Test_CF_CFDP_ReceiveMessage_CallTo_src_IsNotEqTo_config_table_local_eid_But_dst_IsEqTo_config_table_local_eid_And_q_size_CF_Q_RX_IsNotEqTo_CF_MAX_SIMULTANEOUS_RX_SendEventThenIncrement_counters_recv_dropped_AndSet_CF_AppData_engine_in_msg_To_NULL(
     void)
 {
-    // /* Arrange */
-    // uint8               dummy_chan_num = Any_cf_chan_num();
-    // CF_ConfigTable_t   dummy_config_table;
-    // CF_Channel_t*          arg_c;
-    // CF_PduRecvMsg_t         dummy_msg;
-    // const char*         expected_Spec = "CF: dropping packet from %d transaction number 0x%08x due max RX
-    // transactions reached"; CFE_EVS_SendEvent_context_t   context_CFE_EVS_SendEvent;
-
-    // arg_c = &CF_AppData.engine.channels[dummy_chan_num];
-
-    // CF_AppData.config_table = &dummy_config_table;
-    // CF_AppData.config_table->chan[dummy_chan_num].rx_max_messages_per_wakeup = 1; /* 1 forces for loop to run */
-
-    // UT_SetDefaultReturnValue(UT_KEY(CFE_SB_ReceiveBuffer), Any_CFE_Status_t_Except(CFE_SB_NO_MESSAGE));
-
-    // CF_AppData.engine.in.msg = (CFE_SB_Buffer_t*)&dummy_msg;
-    // CF_AppData.config_table->local_eid = Any_uint8(); /*TODO: change to any_CF_EntityId_t */
-    // CF_AppData.engine.in.src = Any_uint8_Except(CF_AppData.config_table->local_eid); /* for src check fail */
-
-    // CF_AppData.engine.in.dst = CF_AppData.config_table->local_eid; /* for dst check fail */
-
-    // UT_SetHookFunction(UT_KEY(CFE_EVS_SendEvent), stub_reporter_hook, &context_CFE_EVS_SendEvent);
-
-    // CF_AppData.hk.channel_hk[dummy_chan_num].q_size[CF_QueueIdx_RX] = CF_MAX_SIMULTANEOUS_RX;
-
-    // /* Arrange for CF_CFDP_RecvPh */
-    // int               forced_return_CF_HeaderSize = Any_int_Positive();/* Any_int_Positive() used because this is
-    // what the CUT sees, in practice this will be relatively small I, ASG, would think */ size_t
-    // forced_return_CFE_SB_GetUserDataLength = forced_return_CF_HeaderSize + 2;/* Any_CFE_MSG_Size_t not used because
-    // only need a small number here */ int               forced_return_CF_GetVariableHeader = 0;
-
-    // /* CF_Assert(chan_num<CF_NUM_CHANNELS) covered by arg_c = &CF_AppData.engine.channels[dummy_chan_num] */
-    // /* CF_Assert(CF_AppData.engine.in.msg) covered by CF_AppData.engine.in.msg = (CFE_SB_Buffer_t*)&dummy_msg; */
-
-    // UT_SetHandlerFunction(UT_KEY(CF_HeaderSize), Handler_int_ForcedReturnOnly, &forced_return_CF_HeaderSize);
-
-    // UT_SetHandlerFunction(UT_KEY(CFE_SB_GetUserDataLength), Handler_size_t_ForcedReturnOnly,
-    // &forced_return_CFE_SB_GetUserDataLength);
-
-    // UT_SetHandlerFunction(UT_KEY(CF_GetVariableHeader), Handler_int_ForcedReturnOnly,
-    // &forced_return_CF_GetVariableHeader);
-
-    // dummy_msg.ph.length = forced_return_CFE_SB_GetUserDataLength - forced_return_CF_HeaderSize; /* ensures equality
-    // so (temp+hsize)==CF_AppData.engine.in.bytes_received */
-
-    // /* Arrange for CF_CFDP_FindTransactionBySequenceNumber */
-    // uint8                   i = 0;
-    // CF_Transaction_t           dummy_t;
-    // CF_Transaction_t*          forced_t_result = &dummy_t;
-    // CF_CList_Traverse_FIND_T_BY_SEQ_NUM_context_t  context_CF_CList_Traverse[NUM_CLISTS];
-
-    // type_of_context_CF_CList_Traverse = FIND_T_BY_SEQ_NUM;
-
-    // UT_SetDataBuffer(UT_KEY(CF_CList_Traverse), &context_CF_CList_Traverse,
-    //   sizeof(context_CF_CList_Traverse), false);
-
-    // for(i = 0; i < NUM_CLISTS; ++i)
-    // {
-    //   context_CF_CList_Traverse[i].context_forced_t = NULL;
-    // }
-
-    // /* Act */
-    // CF_CFDP_ReceiveMessage(arg_c);
-
-    // /* Assert */
-    // UtAssert_STUB_COUNT(CFE_SB_ReceiveBuffer, 1);
-    // UtAssert_STUB_COUNT(CFE_ES_PerfLogAdd, 2);
-    // UtAssert_NULL(CF_AppData.engine.in.msg);
-    // UtAssert_STUB_COUNT(FGV, 0);
-    // UtAssert_True(context_CFE_EVS_SendEvent.EventID == CF_EID_ERR_CFDP_RX_DROPPED,
-    //   "CFE_EVS_SendEvent received EventID %u and should have received %u (CF_EID_ERR_CFDP_RX_DROPPED)",
-    //   context_CFE_EVS_SendEvent.EventID, CF_EID_ERR_CFDP_RX_DROPPED);
-    // UtAssert_True(context_CFE_EVS_SendEvent.EventType == CFE_EVS_EventType_ERROR,
-    //   "CFE_EVS_SendEvent received EventType %u and should have received %u (CFE_EVS_EventType_ERROR)",
-    //   context_CFE_EVS_SendEvent.EventType, CFE_EVS_EventType_ERROR);
-    // UtAssert_StrCmp(context_CFE_EVS_SendEvent.Spec, expected_Spec,
-    //   "CFE_EVS_SendEvent received expected Spec\n'%s' - Received\n'%s' - Expected",
-    //   context_CFE_EVS_SendEvent.Spec, expected_Spec);
-    // /* Assert for CF_CFDP_RecvPh */
-    // UtAssert_STUB_COUNT(CF_HeaderSize, 1);
-    // UtAssert_STUB_COUNT(CF_GetVariableHeader, 1);
-    // /* Assert for CF_CFDP_FindTransactionBySequenceNumber */
-    // UtAssert_STUB_COUNT(CF_CList_Traverse, NUM_CLISTS);
-    // /* Assert for CF_CFDP_DispatchRecv via CF_CFDP_ArmInactTimer */
-    // UtAssert_STUB_COUNT(CF_Timer_InitRelSec, 0);
-    // UtAssert_STUB_COUNT(CFE_EVS_SendEvent, 1);
     UtAssert_MIR("JIRA: GSFCFCS-1734, t is always going to be NULL thus t->chan_num will always segfault");
 } /* end
      Test_CF_CFDP_ReceiveMessage_CallTo_src_IsNotEqTo_config_table_local_eid_But_dst_IsEqTo_config_table_local_eid_And_q_size_CF_Q_RX_IsNotEqTo_CF_MAX_SIMULTANEOUS_RX_SendEventThenIncrement_counters_recv_dropped_AndSet_CF_AppData_engine_in_msg_To_NULL
@@ -5747,92 +5190,6 @@ void Test_CF_CFDP_ReceiveMessage_CallTo_src_IsNotEqTo_config_table_local_eid_But
 
 void Test_CF_CFDP_ReceiveMessage_AssertsBecause_t_Is_NULL(void)
 {
-    // /* Arrange */
-    // uint8               dummy_chan_num = Any_cf_chan_num();
-    // CF_ConfigTable_t   dummy_config_table;
-    // CF_Channel_t*          arg_c;
-    // CF_PduRecvMsg_t         dummy_msg;
-    // const char*         expected_Spec = "CF: dropping packet from %d transaction number 0x%08x due max RX
-    // transactions reached"; CFE_EVS_SendEvent_context_t   context_CFE_EVS_SendEvent;
-
-    // arg_c = &CF_AppData.engine.channels[dummy_chan_num];
-
-    // CF_AppData.config_table = &dummy_config_table;
-    // CF_AppData.config_table->chan[dummy_chan_num].rx_max_messages_per_wakeup = 1; /* 1 forces for loop to run */
-
-    // UT_SetDefaultReturnValue(UT_KEY(CFE_SB_ReceiveBuffer), Any_CFE_Status_t_Except(CFE_SB_NO_MESSAGE));
-
-    // CF_AppData.engine.in.msg = (CFE_SB_Buffer_t*)&dummy_msg;
-    // CF_AppData.config_table->local_eid = Any_uint8(); /*TODO: change to any_CF_EntityId_t */
-    // CF_AppData.engine.in.src = Any_uint8_Except(CF_AppData.config_table->local_eid); /* for src check fail */
-
-    // CF_AppData.engine.in.dst = CF_AppData.config_table->local_eid; /* for dst check fail */
-
-    // UT_SetHookFunction(UT_KEY(CFE_EVS_SendEvent), stub_reporter_hook, &context_CFE_EVS_SendEvent);
-
-    // CF_AppData.hk.channel_hk[dummy_chan_num].q_size[CF_QueueIdx_RX] = CF_MAX_SIMULTANEOUS_RX;
-
-    // /* Arrange for CF_CFDP_RecvPh */
-    // int               forced_return_CF_HeaderSize = Any_int_Positive();/* Any_int_Positive() used because this is
-    // what the CUT sees, in practice this will be relatively small I, ASG, would think */ size_t
-    // forced_return_CFE_SB_GetUserDataLength = forced_return_CF_HeaderSize + 2;/* Any_CFE_MSG_Size_t not used because
-    // only need a small number here */ int               forced_return_CF_GetVariableHeader = 0;
-
-    // /* CF_Assert(chan_num<CF_NUM_CHANNELS) covered by arg_c = &CF_AppData.engine.channels[dummy_chan_num] */
-    // /* CF_Assert(CF_AppData.engine.in.msg) covered by CF_AppData.engine.in.msg = (CFE_SB_Buffer_t*)&dummy_msg; */
-
-    // UT_SetHandlerFunction(UT_KEY(CF_HeaderSize), Handler_int_ForcedReturnOnly, &forced_return_CF_HeaderSize);
-
-    // UT_SetHandlerFunction(UT_KEY(CFE_SB_GetUserDataLength), Handler_size_t_ForcedReturnOnly,
-    // &forced_return_CFE_SB_GetUserDataLength);
-
-    // UT_SetHandlerFunction(UT_KEY(CF_GetVariableHeader), Handler_int_ForcedReturnOnly,
-    // &forced_return_CF_GetVariableHeader);
-
-    // dummy_msg.ph.length = forced_return_CFE_SB_GetUserDataLength - forced_return_CF_HeaderSize; /* ensures equality
-    // so (temp+hsize)==CF_AppData.engine.in.bytes_received */
-
-    // /* Arrange for CF_CFDP_FindTransactionBySequenceNumber */
-    // uint8                   i = 0;
-    // CF_Transaction_t           dummy_t;
-    // CF_Transaction_t*          forced_t_result = &dummy_t;
-    // CF_CList_Traverse_FIND_T_BY_SEQ_NUM_context_t  context_CF_CList_Traverse[NUM_CLISTS];
-
-    // type_of_context_CF_CList_Traverse = FIND_T_BY_SEQ_NUM;
-
-    // UT_SetDataBuffer(UT_KEY(CF_CList_Traverse), &context_CF_CList_Traverse,
-    //   sizeof(context_CF_CList_Traverse), false);
-
-    // for(i = 0; i < NUM_CLISTS; ++i)
-    // {
-    //   context_CF_CList_Traverse[i].context_forced_t = NULL;
-    // }
-
-    // /* Act */
-    // CF_CFDP_ReceiveMessage(arg_c);
-
-    // /* Assert */
-    // UtAssert_STUB_COUNT(CFE_SB_ReceiveBuffer, 1);
-    // UtAssert_STUB_COUNT(CFE_ES_PerfLogAdd, 2);
-    // UtAssert_NULL(CF_AppData.engine.in.msg);
-    // UtAssert_STUB_COUNT(FGV, 0);
-    // UtAssert_True(context_CFE_EVS_SendEvent.EventID == CF_EID_ERR_CFDP_RX_DROPPED,
-    //   "CFE_EVS_SendEvent received EventID %u and should have received %u (CF_EID_ERR_CFDP_RX_DROPPED)",
-    //   context_CFE_EVS_SendEvent.EventID, CF_EID_ERR_CFDP_RX_DROPPED);
-    // UtAssert_True(context_CFE_EVS_SendEvent.EventType == CFE_EVS_EventType_ERROR,
-    //   "CFE_EVS_SendEvent received EventType %u and should have received %u (CFE_EVS_EventType_ERROR)",
-    //   context_CFE_EVS_SendEvent.EventType, CFE_EVS_EventType_ERROR);
-    // UtAssert_StrCmp(context_CFE_EVS_SendEvent.Spec, expected_Spec,
-    //   "CFE_EVS_SendEvent received expected Spec\n'%s' - Received\n'%s' - Expected",
-    //   context_CFE_EVS_SendEvent.Spec, expected_Spec);
-    // /* Assert for CF_CFDP_RecvPh */
-    // UtAssert_STUB_COUNT(CF_HeaderSize, 1);
-    // UtAssert_STUB_COUNT(CF_GetVariableHeader, 1);
-    // /* Assert for CF_CFDP_FindTransactionBySequenceNumber */
-    // UtAssert_STUB_COUNT(CF_CList_Traverse, NUM_CLISTS);
-    // /* Assert for CF_CFDP_DispatchRecv via CF_CFDP_ArmInactTimer */
-    // UtAssert_STUB_COUNT(CF_Timer_InitRelSec, 0);
-    // UtAssert_STUB_COUNT(CFE_EVS_SendEvent, 1);
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t");
 } /* end Test_CF_CFDP_ReceiveMessage_AssertsBecause_t_Is_NULL */
 
@@ -5969,21 +5326,6 @@ void Test_CF_CFDP_CycleTx__Given_node_TransactionContainer_t_flags_all_suspended
 
 void Test_CF_CFDP_CycleTx__AssertsBecauseGiven_node_TransactionContainer_t_flags_all_q_index_IsNotEqTo_CF_Q_TXA(void)
 {
-    // /* Arrange */
-    // CF_Transaction_t           dummy_t;
-    // CF_CListNode_t *              arg_clist_node = &dummy_t.cl_node;
-    // CF_CFDP_CycleTx_args_t  dummy_args;
-    // void*                   arg_context = (void*)&dummy_args;
-    // int                     local_result;
-
-    // dummy_t.flags.com.suspended = false;
-
-    // dummy_t.flags.com.q_index = Any_uint8_Except(CF_QueueIdx_TXA);
-
-    // /* Act */
-    // local_result = CF_CFDP_CycleTx_(arg_clist_node, arg_context);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->flags.com.q_index==CF_QueueIdx_TXA");
 } /* end Test_CF_CFDP_CycleTx__AssertsBecauseGiven_node_TransactionContainer_t_flags_all_q_index_IsNotEqTo_CF_Q_TXA */
 
@@ -6457,16 +5799,6 @@ void Test_CF_CFDP_DoTick_Given_context_Determined_args_c_cur_Is_t_And_t_flags_al
 
 void Test_CF_CFDP_TickTransactions_AssertsBecause_c_tick_type_IsEqTo_CF_TICK_NUM_TYPES(void)
 {
-    // /* Arrange */
-    // CF_Channel_t         dummy_c;
-    // CF_Channel_t*        arg_c = &dummy_c;
-
-    // arg_c->tick_type = CF_TickType_NUM_TYPES;
-
-    // /* Act */
-    // CF_CFDP_TickTransactions(arg_c);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - c->tick_type<CF_TickType_NUM_TYPES");
 } /* end Test_CF_CFDP_TickTransactions_AssertsBecause_c_tick_type_IsEqTo_CF_TICK_NUM_TYPES */
 
@@ -6744,9 +6076,6 @@ void Test_CF_CFDP_TxFile_DoesNotError(void)
 
 void Test_CF_CFDP_TxFile_AssertsBecause_chan_IsGreaterThan_CF_NUM_CHANNELS(void)
 {
-    /* Arrange */
-    /* Act */
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert");
 } /* end Test_CF_CFDP_TxFile_AssertsBecause_chan_IsGreaterThan_CF_NUM_CHANNELS */
 
@@ -6790,101 +6119,11 @@ void Test_CF_CFDP_TxFile_FailsBecause_c_num_cmd_tx_IsEqTo_CF_MAX_COMMANDED_PLAYB
 
 void Test_CF_CFDP_TxFile_AssertsBecause_t_IsReturned_NULL_From_CF_CFDP_FindUnusedTransaction(void)
 {
-    // /* Arrange */
-    // CF_History_t       dummy_history;
-    // CF_Transaction_t   dummy_t;
-    // CF_Channel_t*      dummy_c;
-    // char            arg_src_filename[CF_FILENAME_MAX_LEN] = "placeholder\0";
-    // char            arg_dst_filename[CF_FILENAME_MAX_LEN] = "dstholder\0";
-    // CF_CFDP_Class_t    arg_cfdp_class = Any_cfdp_class_t();
-    // uint8           arg_keep = Any_uint8();
-    // uint8           arg_chan = Any_uint8_LessThan(CF_NUM_CHANNELS);
-    // uint8           arg_priority = Any_uint8();
-    // CF_EntityId_t  arg_dest_id = Any_uint8();
-
-    // dummy_c = &CF_AppData.engine.channels[arg_chan];
-    // dummy_c->num_cmd_tx = Any_uint32_Except(CF_MAX_COMMANDED_PLAYBACK_FILES_PER_CHAN);
-
-    // UT_SetDataBuffer(UT_KEY(CFE_EVS_SendEvent), &EventID,
-    //   sizeof(EventID), false);
-
-    // dummy_t.history = &dummy_history;
-
-    // dummy_t.state = Any_uint8_Except(CF_TxnState_IDLE); /* asserts */
-
-    // /* Arrange for CF_CFDP_FindUnusedTransaction */
-    // dummy_c->qs[CF_QueueIdx_FREE] = NULL; /* makes t NULL */
-
-    // /* Act */
-    // result = CF_CFDP_TxFile(arg_src_filename,
-    //                         arg_dst_filename,
-    //                         arg_cfdp_class,
-    //                         arg_keep,
-    //                         arg_chan,
-    //                         arg_priority,
-    //                         arg_dest_id);
-
-    // /* Assert */
-    // UtAssert_UINT32_EQ(result, CFE_SUCCESS);
-    // /* Assert for CF_CFDP_TxFile_ */
-    // UtAssert_STUB_COUNT(CFE_EVS_SendEvent, 1);
-    // UtAssert_True(EventID == CF_EID_INF_CFDP_S_START_SEND,
-    //   "CFE_EVS_SendEvent receive event id %u and should receive %u (CF_EID_INF_CFDP_S_START_SEND)",
-    //   EventID, CF_EID_INF_CFDP_S_START_SEND);
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t");
 } /* end Test_CF_CFDP_TxFile_AssertsBecause_t_IsReturned_NULL_From_CF_CFDP_FindUnusedTransaction */
 
 void Test_CF_CFDP_TxFile_AssertsBecause_t_state_IsNotEqTo_CFDP_IDLE(void)
 {
-    // /* Arrange */
-    // CF_History_t       dummy_history;
-    // CF_Transaction_t   dummy_t;
-    // CF_Channel_t*      dummy_c;
-    // char            arg_src_filename[CF_FILENAME_MAX_LEN] = "placeholder\0";
-    // char            arg_dst_filename[CF_FILENAME_MAX_LEN] = "dstholder\0";
-    // CF_CFDP_Class_t    arg_cfdp_class = Any_cfdp_class_t();
-    // uint8           arg_keep = Any_uint8();
-    // uint8           arg_chan = Any_uint8_LessThan(CF_NUM_CHANNELS);
-    // uint8           arg_priority = Any_uint8();
-    // CF_EntityId_t  arg_dest_id = Any_uint8();
-
-    // dummy_c = &CF_AppData.engine.channels[arg_chan];
-    // dummy_c->num_cmd_tx = Any_uint32_Except(CF_MAX_COMMANDED_PLAYBACK_FILES_PER_CHAN);
-
-    // UT_SetDataBuffer(UT_KEY(CFE_EVS_SendEvent), &EventID,
-    //   sizeof(EventID), false);
-
-    // dummy_t.history = &dummy_history;
-
-    // dummy_t.state = Any_uint8_Except(CF_TxnState_IDLE); /* asserts */
-
-    // /* Arrange for CF_CFDP_FindUnusedTransaction */
-    // dummy_c->qs[CF_QueueIdx_FREE] = &dummy_t.cl_node;
-    // dummy_c->qs[CF_QueueIdx_HIST] = &dummy_t.history->cl_node;
-    // dummy_c->qs[CF_QueueIdx_HIST_FREE] = NULL; /* always chooses CF_QueueIdx_HIST */
-
-    // /* Arrange for CF_CList_Remove_Ex */
-    // CF_AppData.hk.channel_hk[dummy_c-CF_AppData.engine.channels].q_size[CF_QueueIdx_FREE] = 1; /* avoid assert first
-    // call */ CF_AppData.hk.channel_hk[dummy_c-CF_AppData.engine.channels].q_size[CF_QueueIdx_HIST] = 1; /* avoid
-    // assert second call
-    // */
-
-    // /* Act */
-    // result = CF_CFDP_TxFile(arg_src_filename,
-    //                         arg_dst_filename,
-    //                         arg_cfdp_class,
-    //                         arg_keep,
-    //                         arg_chan,
-    //                         arg_priority,
-    //                         arg_dest_id);
-
-    // /* Assert */
-    // UtAssert_UINT32_EQ(result, CFE_SUCCESS);
-    // /* Assert for CF_CFDP_TxFile_ */
-    // UtAssert_STUB_COUNT(CFE_EVS_SendEvent, 1);
-    // UtAssert_True(EventID == CF_EID_INF_CFDP_S_START_SEND,
-    //   "CFE_EVS_SendEvent receive event id %u and should receive %u (CF_EID_INF_CFDP_S_START_SEND)",
-    //   EventID, CF_EID_INF_CFDP_S_START_SEND);
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - t->state==CF_TxnState_IDLE");
 } /* end Test_CF_CFDP_TxFile_AssertsBecause_t_state_IsNotEqTo_CFDP_IDLE */
 
@@ -7256,56 +6495,6 @@ void Test_CF_CFDP_ProcessPlaybackDirectory_FirstCallTo_OS_DirectoryRead_Returns_
 
 void Test_CF_CFDP_ProcessPlaybackDirectory_AssertsBecause_CallTo_CF_CFDP_FindUnusedTransaction_Returns_NULL(void)
 {
-    // /* Arrange */
-    // CF_Channel_t*        arg_c = &CF_AppData.engine.channels[Any_cf_chan_num()];
-    // CF_Playback_t        dummy_p;
-    // CF_Playback_t*       arg_p = &dummy_p;
-    // const char        context_OS_DirectoryRead[OS_MAX_FILE_NAME];
-    // CF_History_t         dummy_history;
-    // CF_Transaction_t     dummy_pt;
-
-    // AnyRandomStringOfLettersOfLengthCopy(context_OS_DirectoryRead, OS_MAX_FILE_NAME - 1);
-
-    // arg_p->diropen = 1;
-    // arg_p->num_ts = CF_NUM_TRANSACTIONS_PER_PLAYBACK - 1; /* run one loop */
-
-    // arg_p->busy = 1;
-
-    // UT_SetDefaultReturnValue(UT_KEY(OS_DirectoryRead), CFE_SUCCESS);
-    // UT_SetDeferredRetcode(UT_KEY(OS_DirectoryRead), 2, Any_int32_Except(CFE_SUCCESS));
-
-    // UT_SetDataBuffer(UT_KEY(OS_DirectoryRead), context_OS_DirectoryRead,
-    //   sizeof(context_OS_DirectoryRead), false);
-
-    // UT_SetHandlerFunction(UT_KEY(OS_DirectoryClose), Handler_OS_DirectoryClose_ReportOnly, NULL);
-
-    // dummy_pt.history = &dummy_history;
-
-    // AnyRandomStringOfLettersOfLengthCopy(dummy_pt.history->fnames.src_filename, CF_FILENAME_MAX_LEN - 1);
-    // AnyRandomStringOfLettersOfLengthCopy(dummy_pt.history->fnames.dst_filename, CF_FILENAME_MAX_LEN - 1);
-
-    // /* Arrange for CF_CFDP_FindUnusedTransaction */
-    // arg_c->qs[CF_QueueIdx_FREE] = NULL;
-
-    // /* Act */
-    // CF_CFDP_ProcessPlaybackDirectory(arg_c, arg_p);
-
-    // /* Assert */
-    // UtAssert_STUB_COUNT(OS_DirectoryRead, 1);
-    // UtAssert_STUB_COUNT(OS_DirectoryClose, 0);
-    // UtAssert_True(arg_p->diropen == 1,
-    //   "p->diropen is %d and should be 1",
-    //   arg_p->diropen);
-    // UtAssert_True(arg_p->num_ts == CF_NUM_TRANSACTIONS_PER_PLAYBACK,
-    //   "p->num_ts is %d and should be %u (CF_NUM_TRANSACTIONS_PER_PLAYBACK)",
-    //   arg_p->num_ts, CF_NUM_TRANSACTIONS_PER_PLAYBACK);
-    // UtAssert_True(arg_p->busy == 1,
-    //   "p->busy is %d and should be 1",
-    //   arg_p->busy);
-    // /* Assert for CF_CFDP_FindUnusedTransaction */
-    // UtAssert_STUB_COUNT(CF_CList_Remove, 2);
-    // /* Assert for CF_CFDP_FindUnusedChunks */
-    // UtAssert_STUB_COUNT(CF_CList_Pop, 1);
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - pt ");
 } /* end Test_CF_CFDP_ProcessPlaybackDirectory_AssertsBecause_CallTo_CF_CFDP_FindUnusedTransaction_Returns_NULL */
 
@@ -7436,21 +6625,6 @@ void Test_CF_CFDP_UpdatePollPbCounted_IncrementsValueAt_counter_Because_pb_count
 
 void Test_CF_CFDP_UpdatePollPbCounted_AssertsBecause_pb_counted_IsNotEqTo_up_And_up_Is_0_AndValueAt_counter_Is_0(void)
 {
-    /* Arrange */
-    // CF_Playback_t  dummy_pb;
-    // CF_Playback_t* arg_pb = &dummy_pb;
-    // int         arg_up = 0; //TODO: assume 1 is up, 0 is down
-    // uint8       dummy_counter = 0;
-    // uint8*      arg_counter = &dummy_counter;
-    // uint8       initial_counter = dummy_counter;
-    // uint8       expected_pb_counted = !!arg_up;
-
-    // arg_pb->counted = !arg_up;
-
-    /* Act */
-    // CF_CFDP_UpdatePollPbCounted(arg_pb, arg_up, arg_counter);
-
-    /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - *counter");
 } /* end Test_CF_CFDP_UpdatePollPbCounted_DecrementsValueAt_counter_Because_pb_counted_IsNotEqTo_up_And_up_Is_0 */
 
@@ -8027,17 +7201,6 @@ void Test_CF_CFDP_CycleEngine_WhenOneChannelNotFrozenCalls_CF_CFDP_TickTransacti
 
 void Test_CF_CFDP_ResetTransaction_AssertsBecause_t_chan_num_IsEqTo_CF_NUM_CHANNELS(void)
 {
-    // /* Arrange */
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t = &dummy_t;
-    // int               arg_keep_history = Any_int();
-
-    // arg_t->chan_num = CF_NUM_CHANNELS;
-
-    // /* Act */
-    // CF_CFDP_ResetTransaction(arg_t, arg_keep_history);
-
-    // /* Assert */
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert: t->chan_num<CF_NUM_CHANNELS");
 } /* end Test_CF_CFDP_ResetTransaction_AssertsBecause_t_chan_num_IsEqTo_CF_NUM_CHANNELS */
 
@@ -8333,46 +7496,6 @@ void Test_CF_CFDP_ResetTransaction_CallTo_OS_ObjectIdDefined_Returns_false_And_t
 
 void Test_CF_CFDP_ResetTransaction_AssertsBecause_c_num_cmd_tx_Is_0(void)
 {
-    // /* Arrange */
-    // CF_History_t         dummy_history;
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t = &dummy_t;
-    // int               arg_keep_history = Any_int_Except(0);
-    // CF_QueueIdx_t  recorded_index[2];
-
-    // arg_t->chan_num = Any_cf_chan_num();
-
-    // arg_t->history = &dummy_history;
-    // arg_t->history->dir = CF_Direction_TX;
-
-    // arg_t->flags.tx.cmd_tx = Any_uint32_Except(0); /* TODO make Any_unsigned_int_Except() */
-
-    // (&CF_AppData.engine.channels[arg_t->chan_num])->num_cmd_tx = 0;
-
-    // arg_t->p = NULL;
-
-    // UT_SetHandlerFunction(UT_KEY(CF_CList_InsertBack_Ex), handler_CF_CList_InsertBack_Ex_Record_indexes,
-    // &recorded_index);
-
-    // /* Arrange for OS_ObjectIdDefined */
-    // arg_t->fd = 0; /* arg_t->fd = 0 causes OS_ObjectIdDefined (0 != 0) to return false */
-
-    // /* Arrange for CF_CFDP_GetClass */
-    // arg_t->flags.com.q_index = CF_QueueIdx_PEND; /* arg_t->flags.com.q_index = CF_QueueIdx_PEND ensures
-    // ti->flags.com.q_index!=CF_QueueIdx_FREE is never false */
-
-    // /* Act */
-    // CF_CFDP_ResetTransaction(arg_t, arg_keep_history);
-
-    // /* Assert */
-    // UtAssert_STUB_COUNT(CF_DequeueTransaction, 1);
-    // UtAssert_STUB_COUNT(CF_WrappedClose, 0);
-    // UtAssert_UINT32_EQ((&CF_AppData.engine.channels[arg_t->chan_num])->num_cmd_tx, initial_num_cmd_tx - 1);
-    // UtAssert_STUB_COUNT(CF_CList_InsertBack_Ex, 2); /* Includes one call in CF_CFDP_FreeTransaction */
-    // UtAssert_True(recorded_index[0] == CF_QueueIdx_HIST,
-    //   "index sent to first call of CF_CList_InsertBack_Ex was %u and should be %u (CF_QueueIdx_HIST)",
-    //   recorded_index[0], CF_QueueIdx_HIST);
-    // UtAssert_STUB_COUNT(CF_CList_InsertBack, 1);
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert - c->num_cmd_tx");
 } /* end Test_CF_CFDP_ResetTransaction_AssertsBecause_c_num_cmd_tx_Is_0 */
 
@@ -8426,47 +7549,6 @@ void Test_CF_CFDP_ResetTransaction_CallTo_OS_ObjectIdDefined_Returns_false_And_t
 
 void Test_CF_CFDP_ResetTransaction_AssertsBecause_t_p_num_ts_Is_0(void)
 {
-    // /* Arrange */
-    // CF_History_t         dummy_history;
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t = &dummy_t;
-    // uint32            initial_num_cmd_tx = Any_uint32_Except(0);
-    // int               arg_keep_history = Any_int_Except(0);
-    // CF_QueueIdx_t  recorded_index[2];
-
-    // arg_t->chan_num = Any_cf_chan_num();
-
-    // arg_t->history = &dummy_history;
-    // arg_t->history->dir = CF_Direction_TX;
-
-    // arg_t->flags.tx.cmd_tx = 1;
-
-    // (&CF_AppData.engine.channels[arg_t->chan_num])->num_cmd_tx = initial_num_cmd_tx;
-
-    // arg_t->p = NULL;
-
-    // UT_SetHandlerFunction(UT_KEY(CF_CList_InsertBack_Ex), handler_CF_CList_InsertBack_Ex_Record_indexes,
-    // &recorded_index);
-
-    // /* Arrange for OS_ObjectIdDefined */
-    // arg_t->fd = 0; /* arg_t->fd = 0 causes OS_ObjectIdDefined (0 != 0) to return false */
-
-    // /* Arrange for CF_CFDP_GetClass */
-    // arg_t->flags.com.q_index = CF_QueueIdx_PEND; /* arg_t->flags.com.q_index = CF_QueueIdx_PEND ensures
-    // ti->flags.com.q_index!=CF_QueueIdx_FREE is never false */
-
-    // /* Act */
-    // CF_CFDP_ResetTransaction(arg_t, arg_keep_history);
-
-    // /* Assert */
-    // UtAssert_STUB_COUNT(CF_DequeueTransaction, 1);
-    // UtAssert_STUB_COUNT(CF_WrappedClose, 0);
-    // UtAssert_UINT32_EQ((&CF_AppData.engine.channels[arg_t->chan_num])->num_cmd_tx, initial_num_cmd_tx - 1);
-    // UtAssert_STUB_COUNT(CF_CList_InsertBack_Ex, 2); /* Includes one call in CF_CFDP_FreeTransaction */
-    // UtAssert_True(recorded_index[0] == CF_QueueIdx_HIST,
-    //   "index sent to first call of CF_CList_InsertBack_Ex was %u and should be %u (CF_QueueIdx_HIST)",
-    //   recorded_index[0], CF_QueueIdx_HIST);
-    // UtAssert_STUB_COUNT(CF_CList_InsertBack, 1);
     UtAssert_MIR("JIRA: GSFCCFS-1733 CF_Assert: t->p->num_ts");
 } /* end
      Test_CF_CFDP_ResetTransaction_CallTo_OS_ObjectIdDefined_Returns_false_And_t_history_dir_Is_CF_DIR_TX_And_t_flags_tx_cmd_tx_Is_1_And_keep_history_Is_non0_Call_CF_CList_InsertBack_Ex_With_CF_Q_HIST_ThenCall_CF_CList_InsertBack_And_CF_CFDP_FreeTransaction
@@ -8525,34 +7607,6 @@ void Test_CF_CFDP_ResetTransaction_CallTo_OS_ObjectIdDefined_Returns_false_And_t
 
 void Test_CF_CFDP_ResetTransaction_AssertsBecause_t_history_dir_IsNeither_CF_DIR_TX_or_CF_DIR_RX(void)
 {
-    // /* Arrange */
-    // CF_History_t         dummy_history;
-    // CF_Transaction_t     dummy_t;
-    // CF_Transaction_t*    arg_t  = &dummy_t;
-    // CF_Playback_t        dummy_p;
-    // uint16            initial_num_ts = Any_uint16_Except(0);
-    // int               arg_keep_history = Any_int_Except(0);
-    // uint8             exceptions[2] = {CF_Direction_RX, CF_Direction_TX};
-    // CF_QueueIdx_t  recorded_index[2];
-
-    // arg_t->chan_num = Any_cf_chan_num();
-
-    // arg_t->history = &dummy_history;
-    // arg_t->history->dir = Any_uint8_ExceptThese(exceptions, 2);
-
-    // /* Arrange for OS_ObjectIdDefined */
-    // arg_t->fd = 0; /* arg_t->fd = 0 causes OS_ObjectIdDefined (0 != 0) to return false */
-
-    // /* Arrange for CF_CFDP_GetClass */
-    // arg_t->flags.com.q_index = CF_QueueIdx_PEND; /* arg_t->flags.com.q_index = CF_QueueIdx_PEND ensures
-    // ti->flags.com.q_index!=CF_QueueIdx_FREE is never false */
-
-    // /* Act */
-    // CF_CFDP_ResetTransaction(arg_t, arg_keep_history);
-
-    // /* Assert */
-    // UtAssert_STUB_COUNT(CF_DequeueTransaction, 1);
-    // UtAssert_STUB_COUNT(CF_WrappedClose, 0);
     UtAssert_MIR(
         "JIRA: GSFCCFS-1733 CF_Assert - 0 (no not a typo, literally 0 is this one, comes from a default switch)");
 } /* end Test_CF_CFDP_ResetTransaction_AssertsBecause_t_history_dir_IsNeither_CF_DIR_TX_or_CF_DIR_RX */
